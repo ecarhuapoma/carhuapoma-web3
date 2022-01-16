@@ -6,13 +6,13 @@
 // gsap.registerPlugin(GSDevTools,DrawSVGPlugin, MotionPathPlugin);
 
 import { gsap } from "gsap";
-import { GSDevTools } from "gsap/GSDevTools";
+// import { GSDevTools } from "gsap/GSDevTools";
 import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 // import gsapCore from "gsap/gsap-core";
 
-gsap.registerPlugin(GSDevTools, MotionPathPlugin, MorphSVGPlugin, DrawSVGPlugin); 
+gsap.registerPlugin(MotionPathPlugin, MorphSVGPlugin, DrawSVGPlugin); 
 // gsap.registerPlugin(MotionPathPlugin, MorphSVGPlugin, DrawSVGPlugin); 
 
 const mainTL = gsap.timeline();
@@ -307,7 +307,7 @@ storeTL.from("#open",{duration:120,backgroundPosition: "-2247px 0px", ease:"none
 
 
 
-GSDevTools.create();
+// GSDevTools.create();
 MotionPathPlugin.create();
 MorphSVGPlugin.create();
 DrawSVGPlugin.create();
