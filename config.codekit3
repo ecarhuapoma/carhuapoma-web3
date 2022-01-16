@@ -63,19 +63,6 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/deploy\/img\/cone.jpg" : {
-      "ft" : 16384,
-      "iS" : 20736,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/deploy\/img\/cone.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
     "\/deploy\/img\/shop.jpg" : {
       "ft" : 16384,
       "iS" : 426451,
