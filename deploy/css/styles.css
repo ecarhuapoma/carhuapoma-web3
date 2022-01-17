@@ -2,6 +2,7 @@
     Mixins
 ============= */
 /* ---------------- Font Sizing ---------------- */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&family=Ubuntu:wght@300;400;700&display=swap");
 html {
   font-size: 100%;
 }
@@ -352,72 +353,73 @@ template {
 /* =============
     Base
 ============= */
-.gs-dev-tools {
-  z-index: 2000;
-}
-
-figure {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-color: #ffbe32;
-  background-image: url(/deploy/img/sun.svg);
-  background-size: contain;
-  height: 300px;
-}
-
 ul {
   margin: 0;
   padding: 0;
 }
 ul li {
   list-style: none;
+  text-decoration: transparent;
 }
 
-.container-grid {
-  display: grid;
-  grid-template-areas: ". grid-content .";
-  grid-template-columns: 15px auto 15px;
-  height: 100vh;
+li {
+  text-decoration: transparent;
 }
-@media (min-width: 1200px) {
-  .container-grid {
-    grid-template-columns: auto 1200px auto;
-  }
-}
-.container-grid > div {
-  grid-area: grid-content;
+
+.hidden {
+  display: none;
 }
 
 /* =============
     Typography
 ============= */
-body {
-  font-family: "Port Lligat Slab", serif;
-  color: #ff6224;
+p {
+  font-family: "Raleway", sans-serif;
 }
-body p {
-  margin: 0;
-  padding: 0;
+
+h1, h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
 }
-body h1, body h2, body h3, body h4 {
-  margin: 0;
-  padding: 0;
+
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+}
+
+#fox {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+#sardinia_body1, #sardinia_body2, #milan_body1 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
 }
 
 /* =============
     Buttons
 ============= */
 button {
+  border: none;
   text-decoration: none;
-  background-color: #ff6224;
+  cursor: default;
+  background-color: #3762C5;
+  color: #fff;
   transition: 0.25s;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 1.25rem;
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  button {
+    font-size: 0.9375rem;
+    padding: 15px;
+  }
 }
 button:hover {
-  color: #ffbe32;
-  background-color: #e25720;
+  background-color: #C64040;
 }
 
 /* =============
@@ -441,162 +443,1286 @@ textarea {
 /* =============
     Navigation
 ============= */
+#nav-container ul {
+  height: 100%;
+}
+#nav-container ul li a:link,
+#nav-container ul li a:visited {
+  color: #fff;
+  padding: 0px 0px;
+  text-decoration: none;
+  transition: 0.25s;
+}
+@media (min-width: 1024px) {
+  #nav-container ul li a:link,
+#nav-container ul li a:visited {
+    color: #fff;
+  }
+}
+#nav-container ul li a:link:hover, #nav-container ul li a:link:active,
+#nav-container ul li a:visited:hover,
+#nav-container ul li a:visited:active {
+  color: #C64040;
+}
+
 /* =============
     Header
 ============= */
-header ul {
-  padding-top: 20px;
+#header {
+  background-color: #fff;
+}
+#header #navigation {
   display: grid;
-  grid-template-columns: 16px auto auto auto 16px;
-  grid-template-areas: ". title1 cream title2 ." "open open open open open";
+  grid-template-columns: 16px auto 60%;
+  grid-template-areas: ". burger ." ". nav .";
 }
-header ul #wiggy {
-  grid-area: title1;
-  text-align: center;
+@media (min-width: 768px) {
+  #header #navigation {
+    grid-template-columns: 100%;
+    grid-template-areas: "nav";
+  }
+}
+#header #navigation #burger_container {
+  grid-area: burger;
+  font-size: 3.75rem;
+  color: #3762C5;
+  margin-bottom: -60px;
+}
+@media (min-width: 768px) {
+  #header #navigation #burger_container {
+    display: none !important;
+  }
+}
+#header #navigation #nav_container {
+  grid-area: nav;
+  display: none;
+  margin-top: 60px;
+  background-color: #3762C5;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
   padding: 20px;
-  padding-bottom: 40px;
-  font-size: calc(1.5rem);
+  margin-bottom: 10px;
 }
-header ul #cone {
-  grid-area: cream;
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 200%;
-  width: 100%;
-  background-position: center;
-  z-index: 10;
-  margin-top: -30px;
-  background-image: url(/deploy/img/cherry2-01.png);
+#header #navigation #nav_container ul {
+  height: 100%;
 }
-header ul #cream {
-  grid-area: title2;
-  text-align: center;
-  padding: 20px;
-  font-size: calc(1.5rem);
+#header #navigation #nav_container ul li {
+  padding: 9px 0px;
 }
-header ul #open {
-  grid-area: open;
-  background-image: url(/deploy/img/shop.jpg);
-  text-align: center;
-  background-size: cover;
-  height: 300px;
-  text-align: center;
-  font-size: calc(2rem);
+#header #navigation #nav_container ul li a:link,
+#header #navigation #nav_container ul li a:visited {
   color: #fff;
+  padding: 0px 0px;
+  text-decoration: none;
+  transition: 0.25s;
+}
+@media (min-width: 1024px) {
+  #header #navigation #nav_container ul li a:link,
+#header #navigation #nav_container ul li a:visited {
+    color: #fff;
+  }
+}
+#header #navigation #nav_container ul li a:link:hover, #header #navigation #nav_container ul li a:link:active,
+#header #navigation #nav_container ul li a:visited:hover,
+#header #navigation #nav_container ul li a:visited:active {
+  color: #C64040;
+}
+@media (min-width: 768px) {
+  #header #navigation #nav_container {
+    display: block !important;
+    background-color: #3762C5;
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    padding: 20px;
+  }
+  #header #navigation #nav_container > ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+#header #title_banner {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  border-bottom: 20px solid #ff6224;
+  align-items: flex-end;
 }
-header ul #open p {
-  opacity: 0;
+#header #title_banner > h1 {
+  align-self: center;
+  order: 2;
+  grid-area: header;
+  font-weight: 300;
+  font-size: 3.125rem;
 }
-header ul #open h1 {
-  font-weight: 400;
+@media (min-width: 768px) {
+  #header #title_banner > h1 {
+    font-size: 6.25rem;
+  }
+}
+#header #title_banner > h1 > span {
+  font-weight: 700;
+  color: #C64040;
+}
+#header #title_banner > h1 > form {
+  order: 1;
+}
+@media (min-width: 768px) {
+  #header #title_banner {
+    align-items: center;
+    padding-bottom: 32px;
+  }
+  #header #title_banner h1 {
+    order: 1;
+  }
+  #header #title_banner > form {
+    order: 2;
+  }
 }
 
 /* =============
     Footer
 ============= */
-#preloader {
-  position: absolute;
-  height: 100vh;
-  width: 100%;
-  z-index: 1000;
-  background-color: #fff;
-  display: grid;
-  align-self: center;
-}
-
-#thetype {
-  stroke-width: 1px;
-  height: 100vh;
-  stroke: black;
-  visibility: hidden;
-}
-
-.splash {
-  visibility: hidden;
-}
-
-.arcs {
-  visibility: hidden;
-}
-
-.cone {
-  visibility: hidden;
-}
-
-.cone10 {
-  visibility: hidden;
-}
-
-.vanilla {
-  visibility: hidden;
-}
-
-.choc {
-  visibility: hidden;
-}
-
-.stack {
-  visibility: hidden;
-  z-index: 500;
-}
-
-.straw {
-  visibility: hidden;
-}
-
-.cher {
-  visibility: hidden;
-}
-
-.done {
-  visibility: hidden;
-}
-
-section {
-  padding-top: 50px;
-}
-section ul {
-  display: grid;
-  grid-template-columns: 16px 50% auto 16px;
-  grid-template-areas: ". dir men ." ". abt ev .";
-}
-section ul button {
-  border: none;
-  text-align: center;
-  padding: 40px;
-  font-size: calc(3rem);
-  background-color: #ff6224;
+#footer {
+  background-color: #39496D;
   color: #fff;
+  margin-top: 60px;
+  padding-bottom: 30px;
+}
+@media (min-width: 768px) {
+  #footer {
+    padding-bottom: 0px;
+  }
+}
+@media (min-width: 1200px) {
+  #footer {
+    display: grid;
+    grid-template-columns: auto 1200px auto;
+    grid-template-areas: "contain contain contain";
+  }
+}
+#footer > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 1200px) {
+  #footer > div {
+    grid-area: contain;
+  }
+}
+@media (min-width: 768px) {
+  #footer > div {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-areas: "social visit contact" ". copyright .";
+  }
+}
+#footer > div #social {
+  display: flex;
+  color: #fff;
+}
+#footer > div #social > li {
+  padding: 0px 16px;
+}
+@media (min-width: 768px) {
+  #footer > div #social {
+    grid-area: social;
+  }
+}
+#footer > div #contact {
+  display: none;
+  font-family: "Raleway", sans-serif;
+}
+@media (min-width: 768px) {
+  #footer > div #contact {
+    grid-area: contact;
+    display: grid;
+    text-decoration: none;
+  }
+}
+#footer > div #copyright {
+  font-family: "Raleway", sans-serif;
+  margin-top: 0px;
+}
+@media (min-width: 768px) {
+  #footer > div #copyright {
+    grid-area: copyright;
+  }
+}
+#footer > div #title {
+  font-weight: 300;
+  text-align: center;
+}
+#footer > div #title > span {
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  #footer > div #title {
+    grid-area: visit;
+  }
+}
+
+#welcome_section > article #welcome_image {
+  background-image: url("../img/welcome/welcome.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  margin-bottom: -100px;
+}
+#welcome_section > article #welcome-grid {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". content .";
+}
+#welcome_section > article #welcome-grid #welcome-content {
+  grid-area: content;
+  background-color: #3762C5;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  #welcome_section > article #welcome-grid #welcome-content {
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 1024px) {
+  #welcome_section > article #welcome-grid #welcome-content {
+    margin-bottom: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  #welcome_section > article #welcome-grid #welcome-content {
+    margin-bottom: 70px;
+  }
+}
+#welcome_section > article #welcome-grid #welcome-content > h2 {
+  margin-bottom: 10px;
+  margin-top: 15px;
+  font-size: 1.25rem;
+}
+@media (min-width: 768px) {
+  #welcome_section > article #welcome-grid #welcome-content > h2 {
+    font-size: 2.8125rem;
+  }
+}
+@media (min-width: 1024px) {
+  #welcome_section > article #welcome-grid #welcome-content > h2 {
+    font-size: 3.75rem;
+  }
+}
+#welcome_section > article #welcome-grid #welcome-content > p {
+  padding: 0px 60px;
+  font-size: 0.8125rem;
+}
+@media (min-width: 768px) {
+  #welcome_section > article #welcome-grid #welcome-content > p {
+    font-size: 0.875rem;
+    padding: 0px 100px;
+  }
+}
+@media (min-width: 1024px) {
+  #welcome_section > article #welcome-grid #welcome-content > p {
+    font-size: 1rem;
+    padding: 0px 140px;
+  }
+}
+@media (min-width: 1200px) {
+  #welcome_section > article #welcome-grid #welcome-content > p {
+    padding: 0px 180px;
+  }
+}
+@media (min-width: 768px) {
+  #welcome_section > article #welcome-grid {
+    grid-template-columns: 10% auto 10%;
+  }
+}
+@media (min-width: 1200px) {
+  #welcome_section > article #welcome-grid {
+    grid-template-columns: auto 1000px auto;
+  }
+}
+
+#history_section #rome_image {
+  background-image: url("../img/history/rome.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  #history_section #rome_image {
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+}
+#history_section #rome_image > h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 0;
+  color: #000;
+}
+@media (min-width: 768px) {
+  #history_section #rome_image > h1 {
+    font-size: 4.0625rem;
+    color: #fff;
+  }
+}
+@media (min-width: 1024px) {
+  #history_section #rome_image > h1 {
+    font-size: 5rem;
+  }
+}
+#history_section #little {
+  background-color: #3762C5;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-weight: 300;
+  display: grid;
+  font-size: 1rem;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". content .";
+}
+@media (min-width: 768px) {
+  #history_section #little {
+    grid-template-columns: 20% auto 20%;
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 1200px) {
+  #history_section #little {
+    grid-template-columns: auto 600px auto;
+  }
+}
+#history_section #little > p {
+  grid-area: content;
+}
+#history_section #sardinia_image {
+  background-image: url("../img/history/sardinia.png");
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+}
+@media (min-width: 768px) {
+  #history_section #sardinia_image {
+    margin-top: -30px;
+  }
+}
+#history_section #sardinia_title {
+  font-size: 1.5625rem;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  border-left: solid 5px #3762C5;
+  padding: 3px;
+}
+@media (min-width: 768px) {
+  #history_section #sardinia_title {
+    background-color: #3762C5;
+    color: #fff;
+    padding: 0px;
+    margin-top: -50px;
+    font-size: 1.25rem;
+    line-height: 40px;
+  }
+}
+@media (min-width: 1024px) {
+  #history_section #sardinia_title {
+    margin-right: -50px;
+    font-size: 1.25rem;
+    line-height: 40px;
+  }
+}
+#history_section #church_image {
+  background-image: url("../img/history/church.png");
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+}
+#history_section #milan_title {
+  font-size: 1.5625rem;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  border-left: solid 5px #3762C5;
+  padding: 3px;
+}
+@media (min-width: 768px) {
+  #history_section #milan_title {
+    background-color: #3762C5;
+    color: #fff;
+    padding: 0px;
+    margin-top: -50px;
+    font-size: 1.25rem;
+    line-height: 40px;
+  }
+}
+@media (min-width: 1024px) {
+  #history_section #milan_title {
+    margin-left: -50px;
+    font-size: 1.25rem;
+    line-height: 40px;
+    padding-bottom: 0px;
+    margin-bottom: 60px;
+  }
+}
+#history_section #flag_image {
+  background-image: url("../img/history/flag.png");
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+}
+#history_section #annoying_grid {
+  display: grid;
+  grid-template-columns: 36px auto 36px;
+  grid-template-areas: ". image1 ." ". body1 ." ". body2 ." ". image2 ." ". body3 .";
+}
+#history_section #annoying_grid #annoying_flag {
+  display: none;
+}
+@media (min-width: 1024px) {
+  #history_section #annoying_grid #annoying_flag {
+    display: list-item;
+  }
+}
+#history_section #annoying_grid #annoying_sardinia {
+  grid-area: image1;
+}
+#history_section #annoying_grid #sardinia_body1 {
+  grid-area: body1;
+  margin-top: -20px;
+  padding-left: 20px;
+  border-left: solid 5px #3762C5;
+}
+@media (min-width: 768px) {
+  #history_section #annoying_grid #sardinia_body1 {
+    padding-left: 0px;
+    margin-top: 10px;
+    padding-left: 15px;
+    border-left: none;
+    border-top: solid 5px #3762C5;
+  }
+}
+@media (min-width: 1024px) {
+  #history_section #annoying_grid #sardinia_body1 {
+    border-top: none;
+    border-left: solid 5px #3762C5;
+    padding-left: 15px;
+    margin-left: 15px;
+    margin-top: -65px;
+    margin-bottom: 60px;
+    font-size: 0.9375rem;
+  }
+  #history_section #annoying_grid #sardinia_body1 > p {
+    margin-top: 25px;
+  }
+}
+#history_section #annoying_grid #sardinia_body2 {
+  grid-area: body2;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
+  margin-top: -10px;
+  padding-left: 20px;
+  border-left: solid 5px #3762C5;
+}
+@media (min-width: 768px) {
+  #history_section #annoying_grid #sardinia_body2 {
+    border-left: none;
+  }
+  #history_section #annoying_grid #sardinia_body2 > p {
+    border-left: solid 5px #3762C5;
+    padding-top: 15px;
+    padding-left: 15px;
+    margin-left: -5px;
+    margin-top: -20px;
+    padding-bottom: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  #history_section #annoying_grid #sardinia_body2 > p {
+    border-left: none;
+    padding: 0px;
+    margin-top: -30px;
+    padding-left: 10px;
+    padding-bottom: 0px;
+    font-size: 0.9375rem;
+  }
+}
+#history_section #annoying_grid #annoying_milan {
+  grid-area: image2;
+}
+#history_section #annoying_grid #milan_body1 {
+  grid-area: body3;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
+  margin-top: -10px;
+  padding-left: 20px;
+  border-left: solid 5px #3762C5;
+}
+#history_section #annoying_grid #milan_body1 #milan_button {
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  #history_section #annoying_grid #milan_body1 #milan_button {
+    justify-content: flex-end;
+  }
+}
+@media (min-width: 768px) {
+  #history_section #annoying_grid #milan_body1 {
+    border-left: none;
+    border-top: solid 5px #3762C5;
+    margin-top: 20px;
+    text-align: right;
+    padding-right: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  #history_section #annoying_grid #milan_body1 {
+    border-top: none;
+    border-right: solid 5px #3762C5;
+    padding-right: 15px;
+    margin-right: 15px;
+    margin-top: -65px;
+    margin-bottom: 60px;
+    margin-left: 150px;
+    font-size: 0.9375rem;
+  }
+  #history_section #annoying_grid #milan_body1 > p {
+    margin-top: 25px;
+  }
+}
+@media (min-width: 768px) {
+  #history_section #annoying_grid {
+    grid-template-columns: 30% 10% 20% 10% auto;
+    grid-template-areas: "image1 body1 body1 body1 ." "body2 . body3 image2 image2";
+  }
+}
+@media (min-width: 1024px) {
+  #history_section #annoying_grid {
+    grid-template-columns: auto 10% 15% 5% 10% 30%;
+    grid-template-areas: "image1 . flag1 flag1 . image2" "body1 body2 body2 . body3 body3";
+  }
+  #history_section #annoying_grid #sardinia_image {
+    margin-top: -50px;
+  }
+  #history_section #annoying_grid #church_image {
+    margin-top: -50px;
+  }
+  #history_section #annoying_grid #milan_body1 {
+    text-align: right;
+  }
+  #history_section #annoying_grid #annoying_flag {
+    grid-area: flag1;
+    margin-top: 50px;
+  }
+}
+
+#cuisine_section #tomatos_image {
+  background-image: url("../img/food/tomatos.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  #cuisine_section #tomatos_image {
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+}
+#cuisine_section #tomatos_image > h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 30px;
+  line-height: 0;
+  color: #fff;
+}
+@media (min-width: 768px) {
+  #cuisine_section #tomatos_image > h1 {
+    font-size: 4.0625rem;
+    margin-bottom: 25px;
+    color: #fff;
+  }
+}
+@media (min-width: 1024px) {
+  #cuisine_section #tomatos_image > h1 {
+    font-size: 5rem;
+    margin-bottom: 30px;
+  }
+}
+#cuisine_section #lasagna_image {
+  background-image: url("../img/food/lasagna.png");
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+}
+@media (min-width: 768px) {
+  #cuisine_section #cuisine_grid {
+    padding-bottom: 25px;
+    display: grid;
+    background-color: #3762C5;
+    margin-bottom: 50px;
+    grid-template-columns: 60% auto;
+    grid-template-areas: "text lasagna";
+  }
+}
+@media (min-width: 1200px) {
+  #cuisine_section #cuisine_grid {
+    grid-template-columns: 300px 30% auto 300px;
+    grid-template-areas: ". text lasagna .";
+  }
+}
+#cuisine_section #cuisine_grid #cuisine_text {
+  text-align: center;
+  color: #fff;
+  padding: 20px 62px;
+  line-height: 20px;
+  background-color: #3762C5;
+  font-weight: 300;
+  font-family: "Raleway", sans-serif;
+  padding-bottom: 200px;
+}
+@media (min-width: 768px) {
+  #cuisine_section #cuisine_grid #cuisine_text {
+    grid-area: text;
+    margin: 0px;
+    padding-left: 20px;
+    padding-bottom: 0px;
+    text-align: left;
+    margin-right: 20px;
+  }
+  #cuisine_section #cuisine_grid #cuisine_text > p {
+    border-left: solid 3px #fff;
+    padding-left: 15px;
+    margin-top: -20px;
+    padding-top: 25px;
+  }
+  #cuisine_section #cuisine_grid #cuisine_text #bottom_text {
+    border-left: solid 3px #fff;
+    padding-left: 15px;
+    margin-top: -20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+#cuisine_section #cuisine_grid #lasagna_image {
+  margin: 0px 40px;
+  margin-top: -150px;
+  margin-bottom: 70px;
+}
+@media (min-width: 768px) {
+  #cuisine_section #cuisine_grid #lasagna_image {
+    grid-area: lasagna;
+    margin-top: 0px;
+    padding: 0px;
+    width: 100%;
+    margin-left: 0px;
+    margin-bottom: 14px;
+    margin-top: 40px;
+    background-position: left;
+  }
+}
+
+#destinations_section > article {
+  grid-area: article;
+  display: grid;
+  grid-template-columns: 20px auto 20px;
+  grid-template-areas: "opener opener opener" ". head ." ". title ." ". body ." ". image ." "button button button";
+}
+@media (min-width: 768px) {
+  #destinations_section > article {
+    grid-template-columns: 40px 40% auto 40px;
+    grid-template-areas: "opener opener opener opener" ". head title ." ". head body ." ". image body ." ". image button .";
+  }
+}
+#destinations_section > article #place_image {
+  background-image: url("../img/destinations/place2.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  grid-area: opener;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+@media (min-width: 768px) {
+  #destinations_section > article #place_image {
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+}
+#destinations_section > article #place_image > h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 0;
+  color: #fff;
+}
+@media (min-width: 768px) {
+  #destinations_section > article #place_image > h1 {
+    font-size: 4.0625rem;
+    color: #fff;
+  }
+}
+@media (min-width: 1024px) {
+  #destinations_section > article #place_image > h1 {
+    font-size: 5rem;
+  }
+}
+#destinations_section > article #colorfulhomes_image {
+  background-image: url("../img/destinations/colorfulhomes.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  margin: 0px 25px;
+  grid-area: head;
+  margin-top: 0px;
+}
+@media (min-width: 768px) {
+  #destinations_section > article #colorfulhomes_image {
+    margin: 0px 25px;
+    margin-left: -5px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+  }
+}
+#destinations_section > article #colorfulhomes_image > h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 1.5625rem;
+  text-align: center;
+  color: #fff;
+  background-color: #3762C5;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: -15px;
+  padding: 10px;
+}
+@media (min-width: 768px) {
+  #destinations_section > article #colorfulhomes_image > h2 {
+    font-size: 1.125rem;
+    margin-left: 0px;
+    margin-right: 70px;
+    margin-top: -40px;
+  }
+}
+#destinations_section > article #naples_title {
+  grid-area: title;
+}
+@media (min-width: 768px) {
+  #destinations_section > article #naples_title {
+    padding-top: 40px;
+  }
+}
+#destinations_section > article #naples_title > h3 {
+  font-weight: 300;
+  font-size: 3.125rem;
+  text-align: center;
+  color: #fff;
+  background-color: #3762C5;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: -20px;
+}
+@media (min-width: 768px) {
+  #destinations_section > article #naples_title > h3 {
+    text-align: left;
+    margin-left: -25px;
+    padding-left: 25px;
+  }
+}
+#destinations_section > article #destination_type {
+  text-align: left;
+  font-family: "Ubuntu", sans-serif;
+  grid-area: body;
+}
+#destinations_section > article #destination_type > p {
+  font-size: 0.875rem;
+  border-left: solid 5px #3762C5;
+  line-height: 19px;
+  padding-left: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: -50px;
+  margin-right: 20px;
+  margin-bottom: 0px;
+}
+@media (min-width: 768px) {
+  #destinations_section > article #destination_type {
+    padding-left: 0px;
+    margin-left: 0 px;
+  }
+  #destinations_section > article #destination_type > p {
+    font-size: 1rem;
+    line-height: 22px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+}
+#destinations_section > article #italyalley {
+  background-image: url("../img/destinations/italyalley.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  grid-area: image;
+}
+@media (min-width: 768px) {
+  #destinations_section > article #italyalley {
+    margin: 0px 25px;
+    margin-left: -5px;
+    margin-bottom: 80px;
+    margin-top: -60px;
+  }
+}
+#destinations_section > article #destination_button {
+  grid-area: button;
+  display: flex;
+  justify-content: center;
+}
+#destinations_section > article #destination_button > button {
   width: 100%;
+  margin: 0px 10px;
+  margin-bottom: 70px;
+  font-size: 1.875rem;
+}
+@media (min-width: 768px) {
+  #destinations_section > article #destination_button > button {
+    margin-bottom: 70px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #travel_section {
+    display: grid;
+    grid-template-columns: auto 1200px auto;
+    grid-template-areas: ". article .";
+    background-image: url(../img/travel/lineline2.svg);
+  }
+}
+@media (min-width: 768px) {
+  #travel_section {
+    background-image: url(../img/travel/lineline.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+#travel_section > article {
+  grid-area: article;
+  padding-bottom: 60px;
+  display: grid;
+  grid-template-columns: 20px auto 20px;
+  grid-template-areas: "opener opener opener" ". b1 ." "i1 i1 i1" ". b2 ." ". b3 ." ". i2 .";
+}
+@media (min-width: 768px) {
+  #travel_section > article {
+    grid-template-columns: 30% 5% 30% 10% auto;
+    grid-template-areas: "opener opener opener b1 b1" "i2 i2 b2 b2 ." ". i1 i1 i1 b3";
+  }
+}
+#travel_section > article #plane_image {
+  grid-area: opener;
+  background-image: url("../img/travel/airplane.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  #travel_section > article #plane_image {
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: auto;
+  }
+}
+#travel_section > article #plane_image > h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 0;
+  color: #fff;
+}
+@media (min-width: 768px) {
+  #travel_section > article #plane_image > h1 {
+    font-size: 4.0625rem;
+    color: #fff;
+  }
+}
+@media (min-width: 1024px) {
+  #travel_section > article #plane_image > h1 {
+    font-size: 5rem;
+  }
+}
+#travel_section > article #plane_body {
+  grid-area: b1;
+  background-image: url(../img/travel/testing_line.svg);
+  background-position: center;
+  background-size: cover;
+  height: 350px;
+  z-index: 10;
+  text-align: center;
+}
+#travel_section > article #plane_body > p {
+  background-color: #3762C5;
+  color: #fff;
+  margin: 30px;
+  font-size: 0.75rem;
+  line-height: 16px;
+  padding: 30px;
+  margin-top: -30px;
+  margin-bottom: 150px;
+}
+@media (min-width: 768px) {
+  #travel_section > article #plane_body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #3762C5;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 25px;
+  }
+  #travel_section > article #plane_body > p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 0.875rem;
+    text-align: left;
+    font-weight: 300;
+    line-height: 24px;
+  }
+}
+#travel_section > article #water_image {
+  grid-area: i1;
+  background-image: url("../img/travel/water.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  z-index: 0;
+}
+@media (min-width: 768px) {
+  #travel_section > article #water_image {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 50px;
+  }
+}
+#travel_section > article #airport_body {
+  grid-area: b2;
+  margin: 20px;
+  padding: 30px;
+  padding-top: 20px;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  background-color: #3762C5;
+  color: #fff;
+  margin-top: -40px;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  #travel_section > article #airport_body {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 50px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 24px;
+    padding-left: 15px;
+    padding-right: 25px;
+  }
+}
+@media (min-width: 1024px) {
+  #travel_section > article #airport_body {
+    font-size: 1rem;
+  }
+}
+#travel_section > article #water_body {
+  grid-area: b3;
+  margin: 20px;
+  padding: 60px;
+  padding-top: 20px;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  background-color: #3762C5;
+  color: #fff;
+  margin-top: -40px;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  #travel_section > article #water_body {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 50px;
+    font-size: 0.875rem;
+    text-align: right;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+    padding-left: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  #travel_section > article #water_body {
+    font-size: 1rem;
+  }
+}
+#travel_section > article #airport_image {
+  grid-area: i2;
+  background-image: url("../img/travel/airport.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  margin-top: -60px;
+  z-index: 5;
+  margin-bottom: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+@media (min-width: 768px) {
+  #travel_section > article #airport_image {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  #weather_section {
+    display: grid;
+    grid-template-columns: 20px auto 20px;
+    grid-template-areas: ". grid .";
+  }
+}
+@media (min-width: 1024px) {
+  #weather_section {
+    grid-template-columns: 90px auto 90px;
+  }
+}
+@media (min-width: 1200px) {
+  #weather_section {
+    grid-template-columns: auto 1000px auto;
+  }
+}
+#weather_section #weather_grid {
+  display: grid;
+  background-color: #3762C5;
+  grid-template-columns: 20px auto 20px;
+  grid-template-areas: "title title title" ". sun ." "loc loc loc" ". num ." "cal cal cal" "button button button";
+  padding-bottom: 0px;
+}
+@media (min-width: 768px) {
+  #weather_section #weather_grid {
+    grid-area: grid;
+  }
+}
+@media (min-width: 768px) {
+  #weather_section #weather_grid {
+    padding: 0px;
+    margin: 0px;
+    background-color: #3762C5;
+    grid-template-columns: 10px auto 30% auto 10px;
+    grid-template-areas: ". . title title title" " . sun . loc loc " " . num . img img " ". . p p p" " . cal cal cal . " " button button button button button";
+  }
+}
+#weather_section #weather_grid #weather_words {
+  color: #fff;
+  grid-area: title;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 2.8125rem;
+}
+@media (min-width: 768px) {
+  #weather_section #weather_grid #weather_words {
+    font-size: 1.875rem;
+    text-align: right;
+    padding-right: 30px;
+  }
+}
+#weather_section #weather_grid #sun_img1 {
+  grid-area: sun;
+  text-align: center;
+}
+#weather_section #weather_grid #location_words {
+  color: #fff;
+  grid-area: loc;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 2.8125rem;
+}
+@media (min-width: 768px) {
+  #weather_section #weather_grid #location_words {
+    font-size: 1.875rem;
+    text-align: right;
+    margin-top: -40px;
+  }
+  #weather_section #weather_grid #location_words > h1 {
+    font-weight: 400;
+    border-top: solid 5px #fff;
+    padding-left: 50px;
+    font-size: 3.75rem;
+    padding-top: 20px;
+    padding-right: 20px;
+  }
+}
+#weather_section #weather_grid #location_words > h4 {
+  font-weight: 300;
+  margin-top: -50px;
+  font-size: 2.1875rem;
+}
+@media (min-width: 768px) {
+  #weather_section #weather_grid #location_words > h4 {
+    font-size: 1.25rem;
+    margin-top: -30px;
+    padding-right: 20px;
+  }
+}
+#weather_section #weather_grid #numbers {
+  grid-area: num;
+  text-align: center;
+  color: #fff;
+  margin-top: -70px;
+}
+#weather_section #weather_grid #numbers > h2 {
+  font-size: 6.25rem;
   font-weight: 400;
 }
-section ul #directions {
-  grid-area: dir;
-  margin: 5px;
+@media (min-width: 768px) {
+  #weather_section #weather_grid #numbers > h2 {
+    font-size: 5.625rem;
+    margin-top: 120px;
+  }
 }
-section ul #menu {
-  grid-area: men;
-  margin: 5px;
-}
-section ul #about {
-  grid-area: abt;
-  margin: 5px;
-}
-section ul #events {
-  grid-area: ev;
-  margin: 5px;
-}
-
-#body {
-  display: flex;
-  text-align: center;
-  font-size: calc(1.5rem);
+#weather_section #weather_grid #numbers > h3 {
+  font-size: 3.125rem;
+  border-top: solid 3px #fff;
   padding-top: 20px;
-  padding-left: 150px;
-  padding-right: 150px;
-  padding-bottom: 100px;
+  margin-left: 80px;
+  margin-right: 80px;
+  font-weight: 300;
+  margin-top: -60px;
+}
+@media (min-width: 768px) {
+  #weather_section #weather_grid #numbers > h3 {
+    font-size: 2.1875rem;
+    margin-top: -50px;
+  }
+}
+#weather_section #weather_grid #weather_shell {
+  display: none;
+  background-image: url(../img/destinations/colorfulhomes.jpg);
+}
+@media (min-width: 768px) {
+  #weather_section #weather_grid #weather_shell {
+    display: grid;
+    grid-area: img;
+    background-size: cover;
+    height: 200px;
+    margin-right: 20px;
+  }
+}
+#weather_section #weather_grid #stupid {
+  display: none;
+}
+@media (min-width: 768px) {
+  #weather_section #weather_grid #stupid {
+    display: list-item;
+    color: transparent;
+    grid-area: p;
+    margin-top: -50px;
+    margin-left: 90px;
+    border-bottom: solid 3px #fff;
+  }
+}
+#weather_section #weather_grid #calendar {
+  grid-area: cal;
+  padding-bottom: 50px;
+  margin-top: 100px;
+}
+#weather_section #weather_grid #calendar #calendar_grid {
+  grid-area: whole;
+  display: grid;
+  color: #fff;
+  grid-template-columns: 16px auto auto auto 16px;
+  grid-template-areas: ". mon tues wed .";
+}
+@media (min-width: 768px) {
+  #weather_section #weather_grid #calendar #calendar_grid {
+    grid-template-columns: 16px auto auto auto auto auto auto 16px;
+    grid-template-areas: ". mon tues wed thurs fri sat .";
+  }
+}
+#weather_section #weather_grid #calendar #calendar_grid .sun_class {
+  height: 75px;
+}
+@media (min-width: 768px) {
+  #weather_section #weather_grid #calendar #calendar_grid .sun_class {
+    height: 50px;
+  }
+}
+#weather_section #weather_grid #calendar #calendar_grid .block_class {
+  text-align: center;
+  border: solid 3px #fff;
+  margin: 0px 5px;
+  padding-top: 25px;
+}
+#weather_section #weather_grid #calendar #calendar_grid #monday {
+  grid-area: mon;
+}
+#weather_section #weather_grid #calendar #calendar_grid #tuesday {
+  grid-area: tues;
+}
+#weather_section #weather_grid #calendar #calendar_grid #wednesday {
+  grid-area: wed;
+}
+#weather_section #weather_grid #calendar #calendar_grid #thursday {
+  display: none;
+}
+@media (min-width: 768px) {
+  #weather_section #weather_grid #calendar #calendar_grid #thursday {
+    display: list-item;
+    grid-area: thurs;
+  }
+}
+#weather_section #weather_grid #calendar #calendar_grid #friday {
+  display: none;
+}
+@media (min-width: 768px) {
+  #weather_section #weather_grid #calendar #calendar_grid #friday {
+    display: list-item;
+    grid-area: fri;
+  }
+}
+#weather_section #weather_grid #calendar #calendar_grid #saturday {
+  display: none;
+}
+@media (min-width: 768px) {
+  #weather_section #weather_grid #calendar #calendar_grid #saturday {
+    display: list-item;
+    grid-area: sat;
+  }
+}
+#weather_section #weather_grid #final_button {
+  background-color: #fff;
+  grid-area: button;
+}
+#weather_section #weather_grid #final_button > button {
+  margin-top: 20px;
+  width: 100%;
+  font-size: 3.125rem;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-weight: 900;
 }

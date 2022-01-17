@@ -1,0 +1,292 @@
+#history_section
+{
+        #rome_image
+        {
+            background-image: url("../img/history/rome.jpg");
+            background-position: center;
+            background-size: cover;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include md{
+            justify-content: flex-start;
+            align-items: flex-end;
+            }
+
+            >h1{
+            font-size: rem-calc(40);
+            font-weight:300;
+            
+            line-height: 0;
+            color: $black;
+            
+
+            @include md{
+            font-size: rem-calc(65);
+            color: $white;
+            }
+            @include lg{
+                font-size: rem-calc(80);
+            }
+            }
+        }
+
+        #little{
+            background-color: $bg-blue;
+            color: $white;
+            padding: 20px;
+            text-align: center;
+            font-weight: 300;
+            display: grid;
+            font-size: rem-calc(16);
+            grid-template-columns: 16px auto 16px;
+            grid-template-areas: ". content .";
+            @include md{
+                grid-template-columns: 20% auto 20%;
+                font-size: rem-calc(20);
+            }
+            @include xl{
+                grid-template-columns: auto 600px auto;
+            }
+            >p{
+                grid-area: content;
+            }
+        }
+
+        #sardinia_image
+        {
+            background-image: url("../img/history/sardinia.png");
+            background-position: center;
+            background-size: cover;
+            height: 300px;
+            @include md{
+                margin-top: -30px;
+            }
+        }
+
+        #sardinia_title{
+            font-size: rem-calc(25);
+            background-color: $white;
+            color: $black;
+            text-align: center;
+
+            border-left: solid 5px $bg-blue;
+
+            padding: 3px;
+
+            @include md{
+                background-color: $bg-blue;
+                color: $white;
+                padding: 0px;
+                margin-top: -50px;
+                font-size: rem-calc(20);
+                line-height: 40px;
+            }
+            @include lg{
+                margin-right: -50px;
+                font-size: rem-calc(20);
+                line-height: 40px;
+                //padding: 1px 0px;
+            }
+        }
+
+        #church_image
+        {
+            background-image: url("../img/history/church.png");
+            background-position: center;
+            background-size: cover;
+            height: 300px;
+        }
+
+        #milan_title{
+            font-size: rem-calc(25);
+            background-color: $white;
+            color: $black;
+            text-align: center;
+
+            border-left: solid 5px $bg-blue;
+
+            padding: 3px;
+
+            @include md{
+                background-color: $bg-blue;
+                color: $white;
+                padding: 0px;
+                margin-top: -50px;
+                font-size: rem-calc(20);
+                line-height: 40px;
+            }
+            @include lg{
+                margin-left: -50px;
+                font-size: rem-calc(20);
+                line-height: 40px;
+                padding-bottom: 0px;
+                margin-bottom: 60px;
+                //padding: 1px 0px;
+            }
+        }
+
+        #flag_image
+        {
+            background-image: url("../img/history/flag.png");
+            background-position: center;
+            background-size: cover;
+            height: 200px;
+        }
+
+        #annoying_grid{
+            #annoying_flag{
+                display: none;
+                @include lg{
+                    display: list-item;
+                }
+            }
+            display: grid;
+            grid-template-columns: 36px auto 36px;
+            grid-template-areas:
+            ". image1 ."
+            ". body1 ."
+            ". body2 ."
+            ". image2 ."
+            ". body3 .";
+            #annoying_sardinia{
+                grid-area: image1;
+            }
+            #sardinia_body1{
+                grid-area: body1;
+                margin-top: -20px;
+                padding-left: 20px;
+                border-left: solid 5px $bg-blue;
+                
+                @include md{
+                    padding-left: 0px;
+                    margin-top: 10px;
+                    padding-left: 15px;
+                    border-left: none;
+                    border-top: solid 5px $bg-blue;
+                }
+                @include lg{
+                    border-top: none;
+                    border-left: solid 5px $bg-blue;
+                    padding-left: 15px;
+                    margin-left: 15px;
+                    margin-top: -65px;
+                    margin-bottom: 60px;
+                    font-size: rem-calc(15);
+                    >p{
+                        margin-top: 25px;
+                        
+                    }
+                }
+            }
+            #sardinia_body2{
+                grid-area: body2;
+                padding-bottom: 10px;
+                margin-bottom: 50px;
+                margin-top: -10px;
+                padding-left: 20px;
+                border-left: solid 5px $bg-blue;
+                
+               
+                @include md{
+                    border-left: none;
+                    >p{
+                        border-left: solid 5px $bg-blue;
+                        padding-top: 15px;
+                        padding-left: 15px;
+                        margin-left: -5px;
+                        margin-top: -20px;
+                        padding-bottom: 10px;
+                    }
+                }
+                
+                @include lg{
+                        >p{
+                            border-left: none;
+                            padding: 0px;
+                            margin-top: -30px;
+                            padding-left: 10px;
+                            padding-bottom: 0px;
+                            font-size: rem-calc(15);
+                        }
+                }
+            }
+            #annoying_milan{
+                grid-area: image2;
+            }
+            #milan_body1{
+                grid-area: body3;
+                padding-bottom: 10px;
+                margin-bottom: 50px;
+                margin-top: -10px;
+                padding-left: 20px;
+                border-left: solid 5px $bg-blue;
+                #milan_button{
+                    display: flex;
+                    justify-content: center;
+                    @include md{
+                        justify-content: flex-end;
+                    }
+                }
+                @include md{
+                    border-left: none;
+                    border-top: solid 5px $bg-blue;
+                    margin-top: 20px;
+                    text-align: right;
+                    padding-right: 10px;
+                }
+                @include lg{
+                    border-top: none;
+                    border-right: solid 5px $bg-blue;
+                    padding-right: 15px;
+                    margin-right: 15px;
+                    margin-top: -65px;
+                    margin-bottom: 60px;
+                    margin-left: 150px;
+                    font-size: rem-calc(15);
+                    >p{
+                        margin-top: 25px;
+                    }
+                }
+            }
+
+            
+
+            @include md{
+                grid-template-columns: 30% 10% 20% 10% auto;
+                grid-template-areas:
+                "image1 body1 body1 body1 ."
+                "body2 . body3 image2 image2";
+            }
+
+            @include lg{
+                grid-template-columns: auto 10% 15% 5% 10% 30%;
+                grid-template-areas: 
+                "image1 . flag1 flag1 . image2"
+                "body1 body2 body2 . body3 body3";
+
+                #sardinia_image{
+                    margin-top: -50px;
+                }
+
+                #church_image{
+                    margin-top: -50px;
+                }
+
+
+                #milan_body1{
+                    text-align: right;
+                }
+
+                #annoying_flag{
+                    grid-area: flag1;
+                    margin-top: 50px;
+                }
+            }
+           
+
+        }
+}
+

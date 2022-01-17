@@ -1,0 +1,201 @@
+#destinations_section {
+    // @include xl{
+    //        display: grid;
+    //        grid-template-columns: auto 1200px auto;
+    //        grid-template-areas: ". article ."
+    //     }
+>article {
+        grid-area: article;
+        display: grid;
+        grid-template-columns: 20px auto 20px;
+        grid-template-areas:
+            "opener opener opener"
+            ". head ."
+            ". title ."
+            ". body ."
+            ". image ."
+            "button button button";
+        @include md{
+            grid-template-columns: 40px 40% auto 40px;
+            grid-template-areas:
+                "opener opener opener opener"
+                ". head title ."
+                ". head body ."
+                ". image body ."
+                ". image button ."
+        }
+        
+
+        #place_image {
+            background-image: url("../img/destinations/place2.jpg");
+            background-position: center;
+            background-size: cover;
+            height: 300px;
+            grid-area: opener;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 60px;
+
+
+            @include md {
+                justify-content: flex-start;
+                align-items: flex-end;
+
+            }
+            
+
+            >h1 {
+                font-size: rem-calc(40);
+                font-weight: 300;
+
+                line-height: 0;
+                color: $white;
+
+
+                @include md {
+                    font-size: rem-calc(65);
+                    color: $white;
+                }
+
+                @include lg {
+                    font-size: rem-calc(80);
+                }
+            }
+        }
+
+        #colorfulhomes_image {
+            background-image: url("../img/destinations/colorfulhomes.jpg");
+            background-position: center;
+            background-size: cover;
+            height: 300px;
+            margin: 0px 25px;
+            grid-area: head;
+            margin-top: 0px;
+            @include md{
+                margin: 0px 25px;
+                margin-left: -5px;
+                margin-top: 20px;
+                padding-bottom: 10px;
+            }
+
+            >h2 {
+                font-family: 'Raleway', sans-serif;
+                font-weight: 300;
+                font-size: rem-calc(25);
+                text-align: center;
+                color: $white;
+                background-color: $bg-blue;
+                margin-left: 50px;
+                margin-right: 50px;
+                margin-top: -15px;
+                padding: 10px;
+                @include md{
+                    font-size: rem-calc(18);
+                    margin-left: 0px;
+                    margin-right: 70px;
+                    margin-top: -40px;
+                    // text-align: left;
+                    // display: flex;
+                    // align-content: flex-end;
+                }
+
+            }
+        }
+
+        #naples_title {
+            grid-area: title;
+            @include md{
+                padding-top: 40px;
+            }
+
+            >h3 {
+                font-weight: 300;
+                font-size: rem-calc(50);
+                text-align: center;
+                color: $white;
+                background-color: $bg-blue;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                margin-top: -20px;
+                @include md{
+                    text-align: left;
+                    margin-left: -25px;
+                    padding-left: 25px;
+                }
+
+            }
+
+
+        }
+
+        #destination_type {
+            text-align: left;
+            font-family: 'Ubuntu', sans-serif;
+            grid-area: body;
+            
+            >p{
+            font-size: rem-calc(14);
+            border-left: solid 5px $bg-blue;
+            line-height: 19px;
+
+            padding-left: 20px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            margin-top: -50px;
+            margin-right: 20px;
+            margin-bottom: 0px;
+            }
+
+            @include md{
+                >p{
+                    font-size: rem-calc(16);
+                    line-height: 22px;
+                    padding-bottom: 20px;
+                    margin-bottom: 20px;
+                }
+                padding-left: 0px;
+                margin-left:0 px;
+            }
+            
+            
+            
+
+        }
+
+        #italyalley {
+            background-image: url("../img/destinations/italyalley.jpg");
+            background-position: center;
+            background-size: cover;
+            height: 300px;
+            // margin: 0px 25px;
+            grid-area: image;
+            @include md{
+                margin: 0px 25px;
+                margin-left: -5px;
+                margin-bottom: 80px;
+                margin-top: -60px;
+                
+            }
+        }
+
+        #destination_button {
+            grid-area: button;
+            display: flex;
+            justify-content: center;
+
+
+            >button {
+                width: 100%;
+                margin: 0px 10px;
+                margin-bottom: 70px;
+                font-size: rem-calc(30);
+                @include md{
+                    margin-bottom: 70px;
+                   
+                }
+            }
+
+        }
+    }
+}

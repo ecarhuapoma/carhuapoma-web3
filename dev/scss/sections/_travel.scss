@@ -1,0 +1,221 @@
+#travel_section
+{
+    @include xl{
+        display: grid;
+        grid-template-columns: auto 1200px auto;
+        grid-template-areas: ". article .";
+        background-image: url(../img/travel/lineline2.svg);
+    }
+
+    @include md{
+        background-image: url(../img/travel/lineline.svg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    >article{
+    grid-area: article;
+    padding-bottom: 60px;
+    display: grid;
+    grid-template-columns: 20px auto 20px;
+    grid-template-areas:
+    "opener opener opener"
+    ". b1 ."
+    "i1 i1 i1"
+    ". b2 ."
+    ". b3 ."
+    ". i2 .";
+    @include md{
+        grid-template-columns: 30% 5% 30% 10% auto;
+        grid-template-areas:
+        "opener opener opener b1 b1"
+        "i2 i2 b2 b2 ."
+        ". i1 i1 i1 b3"
+    }
+
+
+
+    #plane_image
+    {
+        grid-area: opener;
+        background-image: url("../img/travel/airplane.jpg");
+        background-position: center;
+        background-size: cover;
+        height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+            @include md{
+            justify-content: flex-start;
+            align-items: flex-end;
+            height: auto;
+            
+            }
+            
+            >h1{
+            font-size: rem-calc(40);
+            font-weight:300;
+            
+            line-height: 0;
+            color: $white;
+            
+
+            @include md{
+            font-size: rem-calc(65);
+            color: $white;
+            }
+            @include lg{
+                font-size: rem-calc(80);
+            }
+            }
+
+    }
+    
+    #plane_body{
+        grid-area: b1;
+        background-image: url(../img/travel/testing_line.svg);
+        background-position: center;
+        background-size: cover;
+        height: 350px;
+        z-index: 10;
+        
+        text-align: center;
+        >p{
+            background-color: $bg-blue;
+            color: $white;
+            margin: 30px;
+            font-size: rem-calc(12);
+            line-height: 16px;
+            padding: 30px;
+            margin-top: -30px;
+            margin-bottom: 150px;
+        }
+        @include md{
+            margin: 0px;
+            padding: 0px;
+            background-color: $bg-blue;
+            >p{
+                margin: 0px;
+                padding: 0px;
+                font-size: rem-calc(14);
+                text-align: left;
+                font-weight: 300;
+                line-height: 24px;
+            }
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            
+            padding-right: 25px;
+        }
+    }
+
+    // #squiggle{
+    //     background-image: url(../img/travel/squiggle_sara.png);
+    //     height: 300px;
+    // }
+
+#water_image
+    {
+        grid-area: i1;
+        
+        background-image: url("../img/travel/water.jpg");
+        background-position: center;
+        background-size: cover;
+        height: 300px;
+        z-index: 0;
+        @include md{
+            margin: 0px;
+            padding: 0px;
+            margin-top: 50px;
+        }
+            
+    }
+
+    #airport_body{
+        grid-area: b2;
+        
+        margin: 20px;
+        padding: 30px;
+        padding-top: 20px;
+        text-align: center;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 300;
+        background-color: $bg-blue;
+        color: $white;
+        margin-top: -40px;
+        z-index: 1;
+
+        @include md{
+            margin: 0px;
+            padding: 0px;
+            margin-top: 50px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            font-size: rem-calc(14);
+            font-weight: 300;
+            line-height: 24px;
+            padding-left: 15px;
+            padding-right: 25px;
+        }
+        @include lg{
+            font-size: rem-calc(16);
+        }
+           
+    }
+    #water_body{
+        grid-area: b3;
+        margin: 20px;
+        padding: 60px;
+        padding-top: 20px;
+        text-align: center;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 300;
+        background-color: $bg-blue;
+        color: $white;
+        margin-top: -40px;
+        z-index: 1;
+        
+        @include md{
+            margin: 0px;
+            padding: 0px;
+            margin-top: 50px;
+            font-size: rem-calc(14);
+            text-align: right;
+            line-height: 20px;
+            display: flex;
+            align-items: center;
+            padding-right: 15px;
+            padding-left: 20px;
+        }
+        @include lg{
+            font-size: rem-calc(16);
+        }
+    }
+
+    
+
+    #airport_image
+    {
+        grid-area: i2;
+        background-image: url("../img/travel/airport.jpg");
+        background-position: center;
+        background-size: cover;
+        height: 300px;
+        margin-top: -60px;
+        z-index: 5;
+        margin-bottom: 30px;
+        margin-left: 50px;
+        margin-right: 50px;
+        
+        @include md{
+            margin: 0px;
+            padding: 0px;
+            margin-top: 50px;
+        }
+    }
+}
+}

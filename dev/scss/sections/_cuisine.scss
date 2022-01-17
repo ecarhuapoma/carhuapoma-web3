@@ -1,0 +1,129 @@
+#cuisine_section
+{
+    
+    #tomatos_image
+    {
+        background-image: url("../img/food/tomatos.jpg");
+        background-position: center;
+        background-size: cover;
+        height: 300px;
+        display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+            @include md{
+                justify-content: flex-start;
+            align-items: flex-end;
+            }
+            
+            >h1{
+            font-size: rem-calc(40);
+            font-weight:300;
+            margin-bottom: 30px;
+            line-height: 0;
+            color: $white;
+            
+
+            @include md{
+            font-size: rem-calc(65);
+            margin-bottom: 25px;
+            color: $white;
+            }
+            @include lg{
+                font-size: rem-calc(80);
+                margin-bottom: 30px;
+            }
+            }
+    }
+    #lasagna_image
+    {
+        background-image: url("../img/food/lasagna.png");
+        background-position: center;
+        background-size: cover;
+        height: 300px;
+    }
+
+    #cuisine_grid{
+        
+
+
+        @include md{
+            padding-bottom: 25px;
+            display: grid;
+            background-color: $bg-blue;
+            margin-bottom: 50px;
+            grid-template-columns: 60% auto;
+            grid-template-areas: 
+        "text lasagna"
+        ;
+        }
+        @include xl{
+            grid-template-columns: 300px 30% auto 300px;
+            grid-template-areas: ". text lasagna .";
+        }
+        
+        #cuisine_text{
+            // grid-area: text;
+            text-align: center;
+            color: $white;
+            padding: 20px 62px;
+            line-height: 20px;
+            background-color: $bg-blue;
+            font-weight: 300;
+            font-family: 'Raleway', sans-serif;
+            padding-bottom: 200px;
+            
+            
+            @include md{
+                grid-area: text;
+                margin: 0px;
+                padding-left: 20px;
+                padding-bottom: 0px;
+                //margin-bottom: 25px;
+                text-align: left;
+                margin-right: 20px;
+                // margin-left: 5%;
+                >p{
+                    border-left: solid 3px $white;
+                    padding-left: 15px;
+                    margin-top: -20px;
+                    padding-top: 25px;
+                   
+                    
+                }
+                #bottom_text{
+                        border-left: solid 3px $white;
+                        padding-left: 15px;
+                        margin-top: -20px;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        
+                    }
+            }
+        }
+
+        #lasagna_image{
+            //grid-area: lasagna;
+            margin: 0px 40px;
+            margin-top: -150px;
+            margin-bottom: 70px;
+            
+            
+            @include md{
+                grid-area: lasagna;
+                margin-top: 0px;
+                padding: 0px;
+                width: 100%;
+                margin-left: 0px;
+                margin-bottom: 14px;
+                margin-top: 40px;
+                background-position: left;
+                
+                //height: 300px;
+            }
+            
+        }
+    }
+    
+}

@@ -1,81 +1,131 @@
 /* =============
     Header
 ============= */
-header{
-    
-//     #cone{
-//         grid-area: cream;
-//         background-image:url(/deploy/img/cone.jpg);
-//         background-position: center;
-//         background-size: cover;
-        
 
-//         position: absolute;
-// width: 268px;
-// height: 358px;
-// left: 612px;
-// top: 17px;}
+#header {
+    // display: grid;
+    // grid-template-columns: 16px auto 16px;
+    // grid-template-areas: ". header .";
+    background-color: $white;
 
-    
-
-    ul{
-        
-        padding-top: 20px;
+    #navigation {
         display: grid;
-        grid-template-columns: 16px auto auto auto 16px;
-        grid-template-areas: ". title1 cream title2 ."
-        "open open open open open";
+        grid-template-columns: 16px auto 60%;
+        grid-template-areas: ". burger ."
+            ". nav .";
 
-        #wiggy{
-            grid-area: title1;
-            text-align: center;
-            padding: 20px;
-            padding-bottom: 40px;
-            font-size: calc(1.5rem);
-        }
-
-        #cone{
-            grid-area: cream;
-            background-size: contain;
-            background-repeat: no-repeat;
-            height: 200%;
-            width: 100%;
-            background-position: center;
-            z-index: 10;
-            margin-top: -30px;
-            background-image:url(/deploy/img/cherry2-01.png);
-        }
-
-        #cream{
-            grid-area: title2;
-            text-align: center;
-            padding: 20px;
-            font-size: calc(1.5rem);
-        }
-
-        #open{
-            grid-area: open;
-            background-image: url(/deploy/img/shop.jpg);
-            text-align: center;
-            background-size: cover;
-            height: 300px;
-            text-align: center;
-            font-size: calc(2rem);
-            color: $white;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-border-bottom: 20px solid $ice-cream;
-            p{
-                opacity: 0;
+            @include md{
+                grid-template-columns: 100%;
+                grid-template-areas: "nav";
             }
 
-            h1{
-                font-weight: 400;
-            }
+        #burger_container {
+            grid-area: burger;
+            font-size: rem-calc(60);
+            color: $bg-blue;
+            margin-bottom: -60px;
             
+
+            @include md {
+                display: none !important;
+            }
+        }
+
+        #nav_container {
+            grid-area: nav;
+            display: none;
+            margin-top: 60px;
+            background-color: $bg-blue;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            padding: 20px;
+            margin-bottom: 10px;
+            
+
+            ul {
+                height: 100%;
+                li {
+
+                    padding: 9px 0px;
+                    a:link,
+                    a:visited {
+                        color: $white;
+                        padding: 0px 0px;
+                        text-decoration: none;
+                        transition: 0.25s;
+        
+                        @include lg {
+                            color: $white;
+                        }
+        
+                        &:hover,
+                        &:active {
+                            color: $italy-red;
+                        }
+                    }
+                }
+            }
+
+            @include md {
+                display: block !important;
+                background-color: $bg-blue;
+                color: $white;
+                font-family: 'Raleway', sans-serif;
+                font-weight: 700;
+                padding: 20px;
+                
+                >ul {
+                    display: flex;
+                    justify-content: space-evenly;
+                }
+            }
         }
     }
-    
+
+    #title_banner {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        >h1 {
+            align-self: center;
+            order: 2;
+            grid-area: header;
+            font-weight: 300;
+            font-size: rem-calc(50);
+
+            @include md {
+                font-size: rem-calc(100)
+            }
+
+            >span {
+                font-weight: 700;
+                color: $italy-red;
+            }
+
+            >form {
+
+                order: 1;
+            }
+        }
+
+        @include md {
+
+            align-items: center;
+
+            padding-bottom: 32px;
+
+            h1 {
+                order: 1;
+            }
+
+            >form {
+                order: 2;
+            }
+
+        }
+
+
+
+    }
 }

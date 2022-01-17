@@ -1,3 +1,26 @@
 /* =============
     Navigation
 ============= */
+#nav-container {
+    ul {
+        height: 100%;
+        li {
+            a:link,
+            a:visited {
+                color: $white;
+                padding: 0px 0px;
+                text-decoration: none;
+                transition: 0.25s;
+
+                @include lg {
+                    color: $white;
+                }
+
+                &:hover,
+                &:active {
+                    color: $italy-red;
+                }
+            }
+        }
+    }
+}

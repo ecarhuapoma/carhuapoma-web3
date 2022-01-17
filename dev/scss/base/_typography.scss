@@ -1,19 +1,29 @@
 /* =============
     Typography
 ============= */
-
-
-body{
-    font-family: 'Port Lligat Slab', serif;
-    color: $ice-cream;
-    p{
-    margin: 0;
-    padding: 0;}
-
-h1,h2,h3,h4{
-    margin: 0;
-    padding: 0;
-}
+p{
+    font-family: 'Raleway', sans-serif;
 
 }
+h1, h3{
+    font-family: 'Raleway', sans-serif;
+    font-weight:700;
+}
+
+h2{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+   
+}
+
+#fox{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+#sardinia_body1, #sardinia_body2, #milan_body1{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+}
+
 

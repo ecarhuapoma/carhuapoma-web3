@@ -4,7 +4,7 @@
     {
       "name" : "Process All Remaining Files and Folders",
       "stepType" : 1,
-      "uuidString" : "C90CD2FB-3A9E-4D0E-82AD-442E414F97EA"
+      "uuidString" : "301077FD-6587-4DAE-808A-231B715466F3"
     }
   ],
   "creatorBuild" : "34127",
@@ -15,14 +15,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/.gitattributes",
-      "oF" : 0
-    },
-    "\/build\/.gitignore" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/build\/.gitignore",
       "oF" : 0
     },
     "\/deploy\/css\/styles.css" : {
@@ -37,38 +29,90 @@
       "oF" : 0,
       "pg" : 0
     },
-    "\/deploy\/img\/cherry2-01.png" : {
-      "ft" : 32768,
-      "iS" : 168706,
+    "\/deploy\/img\/destinations\/colorfulhomes.jpg" : {
+      "ft" : 16384,
+      "iS" : 192263,
+      "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/deploy\/img\/cherry2-01.png",
+      "oAP" : "\/deploy\/img\/destinations\/colorfulhomes.jpg",
       "oF" : 0,
-      "oIPL" : 1,
-      "opt" : 1,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/destinations\/italyalley.jpg" : {
+      "ft" : 16384,
+      "iS" : 108526,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/destinations\/italyalley.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/destinations\/place.jpg" : {
+      "ft" : 16384,
+      "iS" : 733458,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/destinations\/place.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/destinations\/place2.jpg" : {
+      "ft" : 16384,
+      "iS" : 878812,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/destinations\/place2.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/destinations\/place3.jpg" : {
+      "ft" : 16384,
+      "iS" : 814747,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/destinations\/place3.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/food\/lasagna.png" : {
+      "ft" : 32768,
+      "iS" : 239229,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/food\/lasagna.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
       "oT" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
     },
-    "\/deploy\/img\/cherry2.jpg" : {
+    "\/deploy\/img\/food\/tomatos.jpg" : {
       "ft" : 16384,
-      "iS" : 20914,
+      "iS" : 150728,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/deploy\/img\/cherry2.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/deploy\/img\/shop.jpg" : {
-      "ft" : 16384,
-      "iS" : 426451,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/deploy\/img\/shop.jpg",
+      "oAP" : "\/deploy\/img\/food\/tomatos.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -76,15 +120,239 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/deploy\/img\/sun.svg" : {
+    "\/deploy\/img\/footer\/facebook.svg" : {
       "ft" : 2097152,
       "miP" : 0,
       "oA" : 2,
-      "oAP" : "\/deploy\/img\/sun.svg",
+      "oAP" : "\/deploy\/img\/footer\/facebook.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,
       "prP" : 0
+    },
+    "\/deploy\/img\/footer\/instagram.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/deploy\/img\/footer\/instagram.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/deploy\/img\/footer\/twitter.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/deploy\/img\/footer\/twitter.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/deploy\/img\/history\/church.png" : {
+      "ft" : 32768,
+      "iS" : 828158,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/history\/church.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/history\/flag.png" : {
+      "ft" : 32768,
+      "iS" : 1348,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/history\/flag.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/history\/rome.jpg" : {
+      "ft" : 16384,
+      "iS" : 83553,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/history\/rome.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/history\/sardinia.png" : {
+      "ft" : 32768,
+      "iS" : 2314887,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/history\/sardinia.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/travel\/airplane.jpg" : {
+      "ft" : 16384,
+      "iS" : 269430,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/travel\/airplane.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/travel\/airport.jpg" : {
+      "ft" : 16384,
+      "iS" : 35957,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/travel\/airport.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/travel\/hotel.png" : {
+      "ft" : 32768,
+      "iS" : 368466,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/travel\/hotel.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/travel\/lineline.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/deploy\/img\/travel\/lineline.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/deploy\/img\/travel\/lineline2.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/deploy\/img\/travel\/lineline2.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/deploy\/img\/travel\/long_squiggle.png" : {
+      "ft" : 32768,
+      "iS" : 20118,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/travel\/long_squiggle.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/travel\/squiggle_sara.png" : {
+      "ft" : 32768,
+      "iS" : 9020,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/travel\/squiggle_sara.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/travel\/squiggle_yum.tiff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/travel\/squiggle_yum.tiff",
+      "oF" : 0
+    },
+    "\/deploy\/img\/travel\/squiggle.png" : {
+      "ft" : 32768,
+      "iS" : 7710,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/travel\/squiggle.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/travel\/testing_line.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/deploy\/img\/travel\/testing_line.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/deploy\/img\/travel\/water.jpg" : {
+      "ft" : 16384,
+      "iS" : 46637,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/travel\/water.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/weather\/sun.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/deploy\/img\/weather\/sun.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/deploy\/img\/welcome\/welcome.jpg" : {
+      "ft" : 16384,
+      "iS" : 648494,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/welcome\/welcome.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
     },
     "\/deploy\/index.html" : {
       "cB" : 0,
@@ -105,20 +373,68 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/dev\/content\/preloader.kit" : {
+    "\/design\/structure-tags.sketch" : {
       "cB" : 0,
-      "ft" : 2048,
+      "ft" : 8192,
       "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/dev\/content\/preloader.html",
+      "oA" : 0,
+      "oAP" : "\/design\/structure-tags.sketch",
       "oF" : 0
     },
-    "\/dev\/global\/body.kit" : {
+    "\/dev\/content\/cuisine.kit" : {
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/dev\/global\/body.html",
+      "oAP" : "\/dev\/content\/cuisine.html",
+      "oF" : 0
+    },
+    "\/dev\/content\/destinations.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/content\/destinations.html",
+      "oF" : 0
+    },
+    "\/dev\/content\/history.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/content\/history.html",
+      "oF" : 0
+    },
+    "\/dev\/content\/travel.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/content\/travel.html",
+      "oF" : 0
+    },
+    "\/dev\/content\/weather.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/content\/weather.html",
+      "oF" : 0
+    },
+    "\/dev\/content\/welcome.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/content\/welcome.html",
+      "oF" : 0
+    },
+    "\/dev\/global\/footer.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/global\/footer.html",
       "oF" : 0
     },
     "\/dev\/global\/head.kit" : {
@@ -135,14 +451,6 @@
       "hM" : 0,
       "oA" : 1,
       "oAP" : "\/dev\/global\/header.html",
-      "oF" : 0
-    },
-    "\/dev\/global\/navi.kit" : {
-      "cB" : 0,
-      "ft" : 2048,
-      "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/dev\/global\/navi.html",
       "oF" : 0
     },
     "\/dev\/global\/scripts.kit" : {
@@ -168,7 +476,7 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/deploy\/js\/scripts-min.js",
-      "oF" : 0,
+      "oF" : 2,
       "sC" : 3,
       "tS" : 0
     },
@@ -312,7 +620,7 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/dev\/scss\/sections\/_body.scss" : {
+    "\/dev\/scss\/sections\/_cuisine.scss" : {
       "aP" : 0,
       "bl" : 0,
       "dP" : 10,
@@ -320,13 +628,13 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/dev\/scss\/sections\/_body.css",
+      "oAP" : "\/dev\/scss\/sections\/_cuisine.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
     },
-    "\/dev\/scss\/sections\/_navi.scss" : {
+    "\/dev\/scss\/sections\/_destinations.scss" : {
       "aP" : 0,
       "bl" : 0,
       "dP" : 10,
@@ -334,13 +642,13 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/dev\/scss\/sections\/_navi.css",
+      "oAP" : "\/dev\/scss\/sections\/_destinations.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
     },
-    "\/dev\/scss\/sections\/_preloader.scss" : {
+    "\/dev\/scss\/sections\/_history.scss" : {
       "aP" : 0,
       "bl" : 0,
       "dP" : 10,
@@ -348,7 +656,49 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/dev\/scss\/sections\/_preloader.css",
+      "oAP" : "\/dev\/scss\/sections\/_history.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/dev\/scss\/sections\/_travel.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/scss\/sections\/_travel.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/dev\/scss\/sections\/_weather.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/scss\/sections\/_weather.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/dev\/scss\/sections\/_welcome.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/scss\/sections\/_welcome.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
@@ -382,35 +732,13 @@
       "oAP" : "\/node_modules",
       "oF" : 0
     },
-    "\/node_modules\/gsap\/CSSPlugin.js" : {
+    "\/node_modules\/jquery\/dist\/jquery.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/node_modules\/gsap\/CSSPlugin-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/node_modules\/gsap\/gsap-core.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/node_modules\/gsap\/gsap-core-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/node_modules\/gsap\/index.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/node_modules\/gsap\/index-min.js",
+      "oAP" : "\/node_modules\/jquery\/dist\/jquery-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -439,10 +767,10 @@
 
   },
   "projectAttributes" : {
-    "creationDate" : 664053382.16540003,
+    "creationDate" : 638898965.76008201,
     "displayValue" : "carhuapoma-web3",
     "displayValueWasSetByUser" : 0,
-    "iconImageName" : "brackets-unblue",
+    "iconImageName" : "brackets-koamaru",
     "iconImageWasSetByUser" : 0
   },
   "projectSettings" : {
