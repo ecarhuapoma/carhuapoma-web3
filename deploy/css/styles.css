@@ -443,26 +443,57 @@ textarea {
 /* =============
     Navigation
 ============= */
-#nav-container ul {
+/* =============
+    Navigation
+============= */
+#nav-container {
+  width: 100%;
   height: 100%;
-}
-#nav-container ul li a:link,
-#nav-container ul li a:visited {
-  color: #fff;
-  padding: 0px 0px;
-  text-decoration: none;
-  transition: 0.25s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (min-width: 1024px) {
-  #nav-container ul li a:link,
-#nav-container ul li a:visited {
-    color: #fff;
+  #nav-container ul {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
   }
 }
-#nav-container ul li a:link:hover, #nav-container ul li a:link:active,
-#nav-container ul li a:visited:hover,
-#nav-container ul li a:visited:active {
+#nav-container ul li {
+  margin-bottom: 20px;
+  text-align: right;
+}
+@media (min-width: 1024px) {
+  #nav-container ul li {
+    align-items: center;
+    border-right: 2px solid #fff;
+    display: flex;
+    margin-bottom: 0px;
+  }
+}
+#nav-container ul li button {
+  background-color: transparent;
+  color: #fff;
+  font-family: "Comfortaa", cursive;
+  font-size: 1.875rem;
+  text-decoration: none;
+  transition: 0.25s;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+}
+@media (min-width: 1024px) {
+  #nav-container ul li button {
+    color: #000;
+    font-size: 1.25rem;
+  }
+}
+#nav-container ul li button:hover {
   color: #C64040;
+}
+#nav-container ul li:last-child {
+  border: none;
 }
 
 /* =============

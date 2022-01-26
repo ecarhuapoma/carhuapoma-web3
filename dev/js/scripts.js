@@ -16,6 +16,37 @@
 // })
 
 import { scrollAnimation, scrollAnimationPointFive, scrollAnimationAppear, scrollAnimation2, scrollAnimation3} from "./scrollAnimation"
+import { burgerTL } from "./burgerAnimation";
+
+
+var burgerButton = document.querySelector("#burger_container");
+let canISeeMenu = false;
+
+function openCloseMenu(){
+    if(canISeeMenu === false){
+        burgerTL.play();
+        // menuAnimation.play();
+        canISeeMenu = true;
+    }
+    else{
+        burgerTL.reverse();
+        // menuAnimation.reverse();
+        canISeeMenu = false;
+    }
+}
+
+burgerButton.addEventListener("click", openCloseMenu);
+
+
+// burgerButton.addEventListener("click", function(){
+//     // console.log("button cliiiiick");
+
+//     burgerTL.play();
+// });
+
+
+
+
 
 window.addEventListener('load', function(){
     scrollAnimation("#welcome-content","#title_banner");
