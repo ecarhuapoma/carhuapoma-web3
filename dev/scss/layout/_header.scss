@@ -9,8 +9,61 @@
     background-color: $white;
 
     #navigation {
+
         display: grid;
-        grid-template-columns: 16px auto 60%;
+        grid-template-columns: 16 auto 16px;
+        grid-template-areas: ". burgie ."
+        ". headline .";
+
+        #burger_container{
+            grid-area: burgie;
+            display: flex;
+            justify-content: flex-end;
+            >svg{
+                
+                padding-top: 10px;
+                height: 7%;
+                position: absolute;
+                
+                
+            }
+
+        }
+
+        //navigation buttons
+        #nav_container{
+            display:none;
+        }
+
+        #title_banner{
+            grid-area: headline;
+            text-align: center;          
+
+            >h1{
+                font-weight: 300;
+                font-size: rem-calc(80);
+                
+            }
+
+            span{
+                font-weight: 700;
+                color: $italy-red;
+            }
+
+            >form{
+                // grid-area: title;
+                padding-bottom: 40px;
+                margin-top: -20px;
+            }
+        }
+    
+
+        // everything below works only in medium size
+        // for reference use only
+
+        @include md{
+            display: grid;
+        grid-template-columns: 16px auto 16px;
         grid-template-areas: ". burger ."
             ". nav .";
 
@@ -21,9 +74,13 @@
 
         #burger_container {
             grid-area: burger;
-            font-size: rem-calc(60);
-            color: $bg-blue;
-            margin-bottom: -60px;
+            >svg{
+                // height: 10%;
+                
+            }
+            // font-size: rem-calc(60);
+            // color: $bg-blue;
+            // margin-bottom: -60px;
             
 
             @include md {
@@ -80,52 +137,87 @@
                 }
             }
         }
-    }
-
-    #title_banner {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-
-        >h1 {
+        
+        #title_banner {
+            display: grid;
+            grid-area: unset;
             align-self: center;
-            order: 2;
-            grid-area: header;
-            font-weight: 300;
-            font-size: rem-calc(50);
 
-            @include md {
-                font-size: rem-calc(100)
+            grid-template-columns: 16px auto 16px;
+            grid-template-areas: ". title ."
+            ". lang .";
+            >h1{
+                align-self: center;
+                order: 2;
+                // grid-area: title;
+                font-weight: 300;
+                font-size: rem-calc(50);
             }
 
-            >span {
+            span{
                 font-weight: 700;
                 color: $italy-red;
             }
 
-            >form {
-
-                order: 1;
-            }
-        }
-
-        @include md {
-
-            align-items: center;
-
-            padding-bottom: 32px;
-
-            h1 {
-                order: 1;
+            >form{
+                // grid-area: title;
+                align-self: center;
+                margin-top: -20px;
+                padding-bottom: 0px;
             }
 
-            >form {
+        
+        @include md{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            >h1 {
+                align-self: center;
                 order: 2;
+                grid-area: header;
+                font-weight: 300;
+                font-size: rem-calc(50);
+
+                @include md {
+                    font-size: rem-calc(100)
+                }
+
+                >span {
+                    font-weight: 700;
+                    color: $italy-red;
+                }
+
+                >form {
+
+                    order: 1;
+                }
             }
 
+            @include md {
+
+                align-items: center;
+
+                padding-bottom: 32px;
+
+                h1 {
+                    order: 1;
+                }
+
+                >form {
+                    order: 2;
+                }
+
+            }
+
+
+
         }
-
-
-
     }
+        
+        }
+        
+    }
+
+    
 }
