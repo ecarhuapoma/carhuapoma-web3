@@ -11,7 +11,7 @@
     #navigation {
 
         display: grid;
-        grid-template-columns: 16 auto 16px;
+        grid-template-columns: 16px auto 16px;
         grid-template-areas: ". burgie ."
         ". headline .";
 
@@ -31,8 +31,11 @@
         }
 
         //navigation buttons
-        #nav_container{
-            display:none;
+        #nav-container{
+            color: $white;
+            background-color: $bg-blue;
+            grid-area: burgie;
+            text-align: center;
         }
 
         #title_banner{
@@ -88,7 +91,7 @@
             }
         }
 
-        #nav_container {
+        #nav-container {
             grid-area: nav;
             display: none;
             margin-top: 60px;
