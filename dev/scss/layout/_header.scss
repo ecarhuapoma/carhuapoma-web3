@@ -28,6 +28,7 @@
                 position: absolute;
                 z-index: 200;
                 
+                
             }
 
         }
@@ -44,7 +45,26 @@
             position: fixed;
             z-index: 1;
 
+            @include md {
+                        grid-area: burgie;
+                        display: block !important;
+                        background-color: $bg-blue;
+                        color: $white;
+                        font-family: 'Raleway', sans-serif;
+                        font-weight: 700;
+                        font-size: rem-calc(20);
+                        padding: 20px;
+                        
+                        >ul {
+                            display: flex;
+                            justify-content: space-evenly;
+                        }
+                    }
 
+        //    @include lg{
+        //        grid-area: headline;
+        //        z-index: 10000;
+        //    }
             
         }
 
@@ -83,75 +103,82 @@
             @include md{
                 grid-template-columns: 100%;
                 grid-template-areas: "nav";
+                
             }
 
         #burger_container {
-            grid-area: burger;
-            position:fixed;
-            >svg{
-                // height: 10%;
+            // grid-area: burger;
+            // position:absolute;
+            // >svg{
+            //     // height: 10%;
                 
-            }
+            // }
             // font-size: rem-calc(60);
             // color: $bg-blue;
             // margin-bottom: -60px;
             
-
+                
             @include md {
-                display: none !important;
+                // position:absolute;
+                margin-top:-280px;
+                >svg{
+                    grid-area: nav;
+                    height: 20%;
+                    width: 20%;
+                }
             }
         }
 
-        #nav-container {
-            grid-area: nav;
-            display: none;
-            margin-top: 60px;
-            background-color: $bg-blue;
-            font-family: 'Raleway', sans-serif;
-            font-weight: 700;
-            padding: 20px;
-            margin-bottom: 10px;
+        // #nav-container {
+        //     // grid-area: nav;
+        //     // display: none;
+        //     // margin-top: 60px;
+        //     // background-color: $bg-blue;
+        //     // font-family: 'Raleway', sans-serif;
+        //     // font-weight: 700;
+        //     // padding: 20px;
+        //     // margin-bottom: 10px;
             
 
-            ul {
-                height: 100%;
-                li {
+        //     ul {
+        //         height: 100%;
+        //         li {
 
-                    padding: 9px 0px;
-                    a:link,
-                    a:visited {
-                        color: $white;
-                        padding: 0px 0px;
-                        text-decoration: none;
-                        transition: 0.25s;
+        //             padding: 9px 0px;
+        //             a:link,
+        //             a:visited {
+        //                 color: $white;
+        //                 padding: 0px 0px;
+        //                 text-decoration: none;
+        //                 transition: 0.25s;
         
-                        @include lg {
-                            color: $white;
-                        }
+        //                 @include lg {
+        //                     color: $white;
+        //                 }
         
-                        &:hover,
-                        &:active {
-                            color: $italy-red;
-                        }
-                    }
-                }
-            }
+        //                 &:hover,
+        //                 &:active {
+        //                     color: $italy-red;
+        //                 }
+        //             }
+        //         }
+        //     }
 
-            @include md {
-                display: block !important;
-                background-color: $bg-blue;
-                color: $white;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 700;
-                font-size: rem-calc(20);
-                padding: 20px;
+        //     @include md {
+        //         display: block !important;
+        //         background-color: $bg-blue;
+        //         color: $white;
+        //         font-family: 'Raleway', sans-serif;
+        //         font-weight: 700;
+        //         font-size: rem-calc(20);
+        //         padding: 20px;
                 
-                >ul {
-                    display: flex;
-                    justify-content: space-evenly;
-                }
-            }
-        }
+        //         >ul {
+        //             display: flex;
+        //             justify-content: space-evenly;
+        //         }
+        //     }
+        // }
         
         #title_banner {
             display: grid;
