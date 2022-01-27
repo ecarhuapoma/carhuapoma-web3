@@ -19,12 +19,14 @@
             grid-area: burgie;
             display: flex;
             justify-content: flex-end;
+            
             >svg{
                 
                 padding-top: 10px;
+                // margin-right:-20px;
                 height: 7%;
                 position: absolute;
-                
+                z-index: 200;
                 
             }
 
@@ -36,6 +38,14 @@
             background-color: $bg-blue;
             grid-area: burgie;
             text-align: center;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            position: fixed;
+            z-index: 1;
+
+
+            
         }
 
         #title_banner{
@@ -77,6 +87,7 @@
 
         #burger_container {
             grid-area: burger;
+            position:fixed;
             >svg{
                 // height: 10%;
                 
@@ -132,6 +143,7 @@
                 color: $white;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 700;
+                font-size: rem-calc(20);
                 padding: 20px;
                 
                 >ul {

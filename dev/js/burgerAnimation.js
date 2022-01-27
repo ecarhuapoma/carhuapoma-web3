@@ -6,16 +6,16 @@ gsap.set(".burger-lines",{transformOrigin:"center"});
 gsap.set("#outline",{drawSVG: "0%"});
 
 const topTL = new gsap.timeline();
-topTL.to(".burger-lines:nth-child(1)",{duration:0.25, y:"+=8"})
+topTL.to(".burger-lines:nth-child(1)",{duration:0.25, y:"+=8", fill:"#FFF"})
 .to(".burger-lines:nth-child(1)",{duration:0.25, rotation:45});
 
 const bottomTL = new gsap.timeline();
-bottomTL.to(".burger-lines:nth-child(3)",{duration:0.25, y:"-=8"})
+bottomTL.to(".burger-lines:nth-child(3)",{duration:0.25, y:"-=8", fill:"#FFF"})
 .to(".burger-lines:nth-child(3)",{duration:0.25, rotation:-45});
 
 const middleTL = new gsap.timeline();
-middleTL.to(".burger-lines:nth-child(2)",{duration:0.25, scale:0})
-.to("#outline",{duration:0.25, drawSVG:"100%", stroke:"#f91f1f"});
+middleTL.to(".burger-lines:nth-child(2)",{duration:0.25, scale:0, fill:"#FFF"})
+.to("#outline",{duration:0.25, drawSVG:"100%", stroke:"#FFF"});
 
 
 export const burgerTL = new gsap.timeline({paused:true});

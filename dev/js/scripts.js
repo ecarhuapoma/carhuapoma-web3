@@ -16,7 +16,7 @@
 // })
 
 
-import { scrollAnimation, scrollAnimationPointFive, scrollAnimationAppear, scrollAnimation2, scrollAnimation3} from "./scrollAnimation"
+import {scrollAnimationPointFive, scrollAnimationAppear, scrollAnimation2, scrollAnimation3} from "./scrollAnimation"
 import { burgerTL } from "./burgerAnimation";
 import { menuAnimation } from "./mobileMenu";
 import { scrollPage } from "./pageScroll";
@@ -26,11 +26,15 @@ import { displayWindowSize } from "./mobileResizing";
 var burgerButton = document.querySelector("#burger_container");
 let canISeeMenu = false;
 
+burgerButton.addEventListener("click", openCloseMenu);
+
 function openCloseMenu(){
+    console.log("a click occured");
     if(canISeeMenu === false){
         burgerTL.play();
         menuAnimation.play();
         canISeeMenu = true;
+        console.log("it read the function");
     }
     else{
         burgerTL.reverse();
@@ -54,9 +58,9 @@ function checkScrolling(e) {
     }
 }
 
-burgerButton.addEventListener("click", openCloseMenu);
-
 window.addEventListener("resize", displayWindowSize);
+window.addEventListener('load', displayWindowSize); 
+
 // burgerButton.addEventListener("click", function(){
 //     // console.log("button cliiiiick");
 
@@ -64,11 +68,8 @@ window.addEventListener("resize", displayWindowSize);
 // });
 
 
-
-
-
 window.addEventListener('load', function(){
-    scrollAnimation("#welcome-content","#title_banner");
+    // scrollAnimation("#welcome-content","#title_banner");
     scrollAnimationPointFive("#little","#rome_image");
     scrollAnimation2("#church_image","#little");
     scrollAnimation3("#sardinia_image","#little");

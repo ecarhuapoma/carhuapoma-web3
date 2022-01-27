@@ -4,6 +4,15 @@
 #nav-container{
     ul {
         height: 100%;
+        display: flex;
+		line-height: 30px;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+        @include md {
+			justify-content: space-between;
+			flex-direction: row;
+		}
         li {
             a:link,
             a:visited {
@@ -24,6 +33,32 @@
         }
     }
 }
+
+
+// #nav-container{
+//     ul {
+//         height: 100%;
+        
+//         li {
+//             a:link,
+//             a:visited {
+//                 color: $white;
+//                 padding: 0px 0px;
+//                 text-decoration: none;
+//                 transition: 0.25s;
+
+//                 @include lg {
+//                     color: $white;
+//                 }
+
+//                 &:hover,
+//                 &:active {
+//                     color: $italy-red;
+//                 }
+//             }
+//         }
+//     }
+// }
 
 /* =============
     Navigation

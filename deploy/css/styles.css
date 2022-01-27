@@ -445,6 +445,17 @@ textarea {
 ============= */
 #nav-container ul {
   height: 100%;
+  display: flex;
+  line-height: 30px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  #nav-container ul {
+    justify-content: space-between;
+    flex-direction: row;
+  }
 }
 #nav-container ul li a:link,
 #nav-container ul li a:visited {
@@ -488,12 +499,18 @@ textarea {
   padding-top: 10px;
   height: 7%;
   position: absolute;
+  z-index: 200;
 }
 #header #navigation #nav-container {
   color: #fff;
   background-color: #3762C5;
   grid-area: burgie;
   text-align: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
 }
 #header #navigation #title_banner {
   grid-area: headline;
@@ -527,6 +544,7 @@ textarea {
 @media (min-width: 768px) {
   #header #navigation #burger_container {
     grid-area: burger;
+    position: fixed;
   }
 }
 @media (min-width: 768px) and (min-width: 768px) {
@@ -579,6 +597,7 @@ textarea {
     color: #fff;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
+    font-size: 1.25rem;
     padding: 20px;
   }
   #header #navigation #nav-container > ul {
