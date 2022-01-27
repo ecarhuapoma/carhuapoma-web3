@@ -15,9 +15,10 @@
 //     }
 // })
 
-import { scrollAnimation, scrollAnimationPointFive, scrollAnimationAppear, scrollAnimation2, scrollAnimation3} from "./scrollAnimation"
+import { scrollAnimation, scrollAnimationPointFive, scrollAnimationAppear, scrollAnimation2, scrollAnimation3} from "./scrollAnimation";
 import { burgerTL } from "./burgerAnimation";
-
+import { menuAnimation } from "./mobileMenu";
+import { displayWindowSize } from "./mobileResizing";
 
 var burgerButton = document.querySelector("#burger_container");
 let canISeeMenu = false;
@@ -25,12 +26,12 @@ let canISeeMenu = false;
 function openCloseMenu(){
     if(canISeeMenu === false){
         burgerTL.play();
-        // menuAnimation.play();
+        menuAnimation.play();
         canISeeMenu = true;
     }
     else{
         burgerTL.reverse();
-        // menuAnimation.reverse();
+        menuAnimation.reverse();
         canISeeMenu = false;
     }
 }
@@ -58,3 +59,9 @@ window.addEventListener('load', function(){
     scrollAnimationAppear(".namename","#annoying_grid");
     scrollAnimationAppear(".headname","#rome_image");
 });
+
+
+window.addEventListener("resize", displayWindowSize);
+
+window.addEventListener('load', displayWindowSize); 
+

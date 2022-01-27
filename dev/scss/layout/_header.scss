@@ -8,12 +8,13 @@
     // grid-template-areas: ". header .";
     background-color: $white;
 
-    #navigation {
+    #navigation{
 
         display: grid;
-        grid-template-columns: 16 auto 16px;
+        grid-template-columns: 16px auto 16px;
         grid-template-areas: ". burgie ."
-        ". headline .";
+        ". headline ."
+        "nav nav nav";
 
         #burger_container{
             grid-area: burgie;
@@ -24,15 +25,61 @@
                 padding-top: 10px;
                 height: 7%;
                 position: absolute;
+                z-index: 1000;
                 
                 
             }
 
         }
 
-        //navigation buttons
-        #nav_container{
-            display:none;
+        //navigation buttons // this is the fucking mobile one
+        #nav-container{
+            // @include sm{
+            //     background-color: $bg-blue;
+            //     // grid-area: nav;
+            // }
+        //     background-color: $bg-blue;
+        //     grid-area: nav;
+        //     position: fixed;
+        //     width: 100vw;
+        //     height: 100vh;
+        //     // z-index: 500;
+
+
+        //     >ul{
+        //         height: 100%;
+        //         text-align: center;
+        //         font-family: 'Raleway', sans-serif;
+        //         font-weight: 700;
+                
+        //         li{
+
+        //             padding: 9px 0px;
+        //             a:link,
+        //             a:visited {
+        //                 color: $white;
+        //                 padding: 0px 0px;
+        //                 text-decoration: none;
+        //                 transition: 0.25s;
+        
+        //                 @include lg {
+        //                     color: $white;
+        //                 }
+        
+        //                 &:hover,
+        //                 &:active {
+        //                     color: $italy-red;
+        //                 }
+        //             }
+        //         }
+        //     }
+
+        //         @include lg {
+        //             background-color: $white;
+        //             position: static;
+        //             height: 100%;
+        //             width: 100%;
+        //         }
         }
 
         #title_banner{
@@ -62,7 +109,7 @@
         // for reference use only
 
         @include md{
-            display: grid;
+        display: grid;
         grid-template-columns: 16px auto 16px;
         grid-template-areas: ". burger ."
             ". nav .";
@@ -78,9 +125,9 @@
                 // height: 10%;
                 
             }
-            // font-size: rem-calc(60);
-            // color: $bg-blue;
-            // margin-bottom: -60px;
+            font-size: rem-calc(60);
+            color: $bg-blue;
+            margin-bottom: -60px;
             
 
             @include md {
@@ -88,9 +135,11 @@
             }
         }
 
-        #nav_container {
+
+        //medium
+        #nav-container{
             grid-area: nav;
-            display: none;
+            display: grid;
             margin-top: 60px;
             background-color: $bg-blue;
             font-family: 'Raleway', sans-serif;
