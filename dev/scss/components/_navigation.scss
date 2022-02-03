@@ -2,9 +2,11 @@
     Navigation
 ============= */
 #nav-container{
+    
     ul {
         height: 100%;
         display: flex;
+        // position: absolute;
 		line-height: 30px;
 		justify-content: center;
 		align-items: center;

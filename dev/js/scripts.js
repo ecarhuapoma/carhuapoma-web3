@@ -14,13 +14,14 @@
 //         isVisible = false;
 //     }
 // })
-
+// import { gsap } from "gsap";
 
 import {scrollAnimationPointFive, scrollAnimationAppear, scrollAnimation2, scrollAnimation3} from "./scrollAnimation"
 import { burgerTL } from "./burgerAnimation";
-import { menuAnimation } from "./mobileMenu";
+import { menuAnimation, buttonMove } from "./mobileMenu";
 import { scrollPage } from "./pageScroll";
 import { displayWindowSize } from "./mobileResizing";
+
 
 
 var burgerButton = document.querySelector("#burger_container");
@@ -43,10 +44,25 @@ function openCloseMenu(){
     }
 }
 
+
+// (".stagger-btns",{scale:"+=1",duration:2});
+
+function buttonFunct(){
+    // gsap.to(".stagger-btns",{paused:true,y:"+=40",duration:2});
+    buttonMove.play();
+    console.log("mouse entered");   
+}
+
+function antiButton(){
+    buttonMove.reverse();
+}
+
 let navButtons = document.querySelectorAll(".nav-btns");
 
 for (const button of navButtons){
     button.addEventListener("click", checkScrolling);
+    button.addEventListener("mouseenter", buttonFunct);
+    button.addEventListener("mouseleave", antiButton);
     button.addEventListener("click", openCloseMenu);
 }
 

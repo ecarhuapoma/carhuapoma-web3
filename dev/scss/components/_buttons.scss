@@ -12,16 +12,17 @@ button{
     transition: 0.25s;
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
-    font-size: rem-calc(20);
+    font-size: rem-calc(30);
     padding: 20px;
     
     @include md{
-        font-size: rem-calc(15);
+        font-size: rem-calc(30);
         padding: 15px;
     }
     
     &:hover{
         background-color: $italy-red;
+        // width: 100vh;
     }
     
 }

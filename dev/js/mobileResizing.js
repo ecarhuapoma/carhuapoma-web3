@@ -14,9 +14,11 @@ export function displayWindowSize(){
    if(document.documentElement.clientHeight <= 1024){
     console.log("hide");
     gsap.set("#nav-container",{y:-menuHeight});
+    gsap.set(".stagger-btns",{alpha:0});
     }else{
         console.log("un-hide");
         gsap.set("#nav-container",{x:0});
+        gsap.set(".stagger-btns",{alpha:1});
     }
 
 }

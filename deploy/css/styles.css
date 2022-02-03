@@ -409,12 +409,12 @@ button {
   transition: 0.25s;
   font-family: "Raleway", sans-serif;
   font-weight: 300;
-  font-size: 1.25rem;
+  font-size: 1.875rem;
   padding: 20px;
 }
 @media (min-width: 768px) {
   button {
-    font-size: 0.9375rem;
+    font-size: 1.875rem;
     padding: 15px;
   }
 }
@@ -496,10 +496,15 @@ textarea {
   justify-content: flex-end;
 }
 #header #navigation #burger_container > svg {
-  padding-top: 10px;
+  padding-top: 7px;
   height: 7%;
   position: absolute;
   z-index: 200;
+}
+@media (min-width: 576px) {
+  #header #navigation #burger_container > svg {
+    height: 12%;
+  }
 }
 #header #navigation #nav-container {
   color: #fff;

@@ -22,7 +22,11 @@
             
             >svg{
                 
-                padding-top: 10px;
+                @include sm{
+                    height: 12%;
+                }
+
+                padding-top: 7px;
                 // margin-right:-20px;
                 height: 7%;
                 position: absolute;
