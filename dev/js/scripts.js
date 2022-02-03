@@ -18,7 +18,7 @@
 
 import {scrollAnimationPointFive, scrollAnimationAppear, scrollAnimation2, scrollAnimation3} from "./scrollAnimation"
 import { burgerTL } from "./burgerAnimation";
-import { menuAnimation, buttonMove } from "./mobileMenu";
+import { menuAnimation, buttonMove, screenLocker } from "./mobileMenu";
 import { scrollPage } from "./pageScroll";
 import { displayWindowSize } from "./mobileResizing";
 
@@ -27,22 +27,24 @@ import { displayWindowSize } from "./mobileResizing";
 var burgerButton = document.querySelector("#burger_container");
 let canISeeMenu = false;
 
+
 burgerButton.addEventListener("click", openCloseMenu);
 
 function openCloseMenu(){
-    console.log("a click occured");
     if(canISeeMenu === false){
         burgerTL.play();
         menuAnimation.play();
         canISeeMenu = true;
-        console.log("it read the function");
+        screenLocker();
     }
     else{
         burgerTL.reverse();
         menuAnimation.reverse();
         canISeeMenu = false;
+        screenLocker();
     }
 }
+
 
 
 // (".stagger-btns",{scale:"+=1",duration:2});
@@ -52,6 +54,8 @@ function buttonFunct(){
     buttonMove.play();
     console.log("mouse entered");   
 }
+
+
 
 function antiButton(){
     buttonMove.reverse();
@@ -76,6 +80,7 @@ function checkScrolling(e) {
 
 window.addEventListener("resize", displayWindowSize);
 window.addEventListener('load', displayWindowSize); 
+
 
 // burgerButton.addEventListener("click", function(){
 //     // console.log("button cliiiiick");

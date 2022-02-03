@@ -514,7 +514,7 @@ textarea {
   width: 100%;
   height: 100%;
   justify-content: center;
-  position: fixed;
+  position: absolute;
   z-index: 1;
 }
 @media (min-width: 768px) {
