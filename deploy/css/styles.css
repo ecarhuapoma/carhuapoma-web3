@@ -453,27 +453,21 @@ textarea {
 }
 @media (min-width: 768px) {
   #nav-container ul {
-    justify-content: space-between;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-end;
+    line-height: 10px;
+    height: 70%;
+    margin-top: 125px;
   }
 }
-#nav-container ul li a:link,
-#nav-container ul li a:visited {
-  color: #fff;
-  padding: 0px 0px;
+#nav-container ul li > button {
   text-decoration: none;
-  transition: 0.25s;
+  background-color: transparent;
 }
-@media (min-width: 1024px) {
-  #nav-container ul li a:link,
-#nav-container ul li a:visited {
-    color: #fff;
-  }
-}
-#nav-container ul li a:link:hover, #nav-container ul li a:link:active,
-#nav-container ul li a:visited:hover,
-#nav-container ul li a:visited:active {
-  color: #C64040;
+#nav-container ul li > button:hover {
+  background-color: #C64040;
+  width: 100vw;
 }
 
 /* =============
@@ -496,6 +490,7 @@ textarea {
   justify-content: flex-end;
 }
 #header #navigation #burger_container > svg {
+  width: 0;
   padding-top: 7px;
   height: 7%;
   position: absolute;
@@ -503,7 +498,8 @@ textarea {
 }
 @media (min-width: 576px) {
   #header #navigation #burger_container > svg {
-    height: 12%;
+    height: 10%;
+    width: 15%;
   }
 }
 #header #navigation #nav-container {
@@ -526,7 +522,8 @@ textarea {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 1.25rem;
-    padding: 20px;
+    margin-top: -20px;
+    padding-bottom: 20px;
   }
   #header #navigation #nav-container > ul {
     display: flex;

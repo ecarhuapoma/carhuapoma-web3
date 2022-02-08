@@ -18,10 +18,13 @@
 
 import {scrollAnimationPointFive, scrollAnimationAppear, scrollAnimation2, scrollAnimation3} from "./scrollAnimation"
 import { burgerTL } from "./burgerAnimation";
-import { menuAnimation, buttonMove, screenLocker } from "./mobileMenu";
+import { menuAnimation, screenLocker } from "./mobileMenu";
 import { scrollPage } from "./pageScroll";
-import { displayWindowSize } from "./mobileResizing";
+import { displayWindowSize, menuListner } from "./mobileResizing";
 
+window.addEventListener('load', menuListner);
+window.addEventListener('resize', menuListner);
+//ssd
 
 
 var burgerButton = document.querySelector("#burger_container");
@@ -49,24 +52,24 @@ function openCloseMenu(){
 
 // (".stagger-btns",{scale:"+=1",duration:2});
 
-function buttonFunct(){
-    // gsap.to(".stagger-btns",{paused:true,y:"+=40",duration:2});
-    buttonMove.play();
-    console.log("mouse entered");   
-}
+// function buttonFunct(){
+//     // gsap.to(".stagger-btns",{paused:true,y:"+=40",duration:2});
+//     buttonMove.play();
+//     console.log("mouse entered");   
+// }
 
 
 
-function antiButton(){
-    buttonMove.reverse();
-}
+// function antiButton(){
+//     buttonMove.reverse();
+// }
 
 let navButtons = document.querySelectorAll(".nav-btns");
 
 for (const button of navButtons){
     button.addEventListener("click", checkScrolling);
-    button.addEventListener("mouseenter", buttonFunct);
-    button.addEventListener("mouseleave", antiButton);
+    // button.addEventListener("mouseenter", buttonFunct);
+    // button.addEventListener("mouseleave", antiButton);
     button.addEventListener("click", openCloseMenu);
 }
 
@@ -78,9 +81,15 @@ function checkScrolling(e) {
     }
 }
 
-window.addEventListener("resize", displayWindowSize);
+window.addEventListener('resize', displayWindowSize);
 window.addEventListener('load', displayWindowSize); 
 
+document.querySelector('.hamburger').addEventListener('click', function(){
+    
+    burgerTL.play();
+    burgerTL.reverse();
+  })
+  
 
 // burgerButton.addEventListener("click", function(){
 //     // console.log("button cliiiiick");

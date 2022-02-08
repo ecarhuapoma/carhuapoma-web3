@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 let menuScrollable = true;
 
 export const menuAnimation = new gsap.timeline({paused:true});
-export const buttonMove = new gsap.timeline({paused:true});
+// export const buttonMove = new gsap.timeline({paused:true});
 
 export function screenLocker(){if(menuScrollable === true){
         window.onscroll = function(){window.scrollTo(0, 0);};
@@ -17,10 +17,14 @@ export function screenLocker(){if(menuScrollable === true){
 
 // gsap.set(".stagger-btns",{y:-60});
 menuAnimation.to("#nav-container",{duration:0.75, ease:"power2.inOut",y:0, x:0});
-menuAnimation.to(".stagger-btns",{stagger:.2,duration:0.3,ease:"power4.inOut",y:"+=20", x:0, alpha:1},"-=.25");
+menuAnimation.to(".stagger-btns",{stagger:.1,duration:0.1,ease:"power4.inOut",y:"+=20", x:0, alpha:1},"-=.25");
 
+if(window.clientWidth <= 1024){
+    gsap.set("#nav-container",{alpha:0});
+}
+//dd
 
-buttonMove.to(".stagger-btns",{scale:1.1,duration:.1});
+// buttonMove.to(".stagger-btns",{scale:1.1,duration:.1});
 
 
 // function screenLocker(){

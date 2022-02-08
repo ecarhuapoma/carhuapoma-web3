@@ -1,4 +1,5 @@
 import { gsap } from "gsap";
+// import { _removeLinkedListItem } from "gsap/gsap-core";
 
 export function displayWindowSize(){
 
@@ -8,6 +9,7 @@ export function displayWindowSize(){
 
     console.log("chcecking window size");
     // console.log(menuHeight);
+
 
     
    // check the view port view and see if the menu needs to be moved
@@ -21,4 +23,36 @@ export function displayWindowSize(){
         gsap.set(".stagger-btns",{alpha:1});
     }
 
+}
+
+
+let navButtonsAnimate = document.querySelectorAll(".stagger-btns");
+console.log(navButtonsAnimate.length);
+
+export function menuListner(){
+    console.log("hovered!!");
+    if(window.innerWidth <= 1048){
+
+        navButtonsAnimate.forEach((link,i) =>{
+            link.addEventListener("mouseenter",()=>{
+                console.log("cursor-inside")
+                gsap.to(navButtonsAnimate[i],{duration:.3,scale:1.15,ease:"power3"})
+            })
+
+            link.addEventListener("mouseleave",()=>{
+                console.log("cursor-left");
+                gsap.to(navButtonsAnimate[i],{duration:.3,scale:1,ease:"power3"});
+            })
+        });
+    }else{
+        navButtonsAnimate.forEach((link,i) => {
+            link.addEventListener("mouseenter", ()=>{
+                gsap.to(navButtonsAnimate[i],{duration:.3,scale:1.15,ease:"power3"})
+            })
+
+            link.addEventListener("mouseleave", ()=>{
+                gsap.to(navButtonsAnimate[i],{duration:.3,scale:1,ease:"power3"})
+            })
+        });
+    }
 }

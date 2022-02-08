@@ -12,26 +12,43 @@
 		align-items: center;
 		flex-direction: column;
         @include md {
-			justify-content: space-between;
-			flex-direction: row;
+			justify-content: center;
+            align-items: center;
+            align-content: flex-end;
+            line-height: 10px;
+            height: 70%;
+            margin-top: 125px;
+			// flex-direction: row;
 		}
         li {
-            a:link,
-            a:visited {
-                color: $white;
-                padding: 0px 0px;
+            // align-self: flex-end;
+
+            >button{
                 text-decoration: none;
-                transition: 0.25s;
-
-                @include lg {
-                    color: $white;
+                background-color: transparent;
+                &:hover{
+                    background-color: $italy-red;
+                    width: 100vw;
                 }
 
-                &:hover,
-                &:active {
-                    color: $italy-red;
-                }
             }
+            // a:link,
+            // a:visited {
+            //     color: $white;
+            //     padding: 0px 0px;
+            //     text-decoration: none;
+            //     transition: 0.25s;
+
+            //     @include lg {
+            //         color: $white;
+            //     }
+
+            //     &:hover,
+            //     &:active {
+            //         color: $italy-red;
+            //         width: 100vw;
+            //     }
+            // }
         }
     }
 }
