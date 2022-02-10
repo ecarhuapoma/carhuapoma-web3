@@ -169,11 +169,18 @@
                 
             @include md {
                 // position:absolute;
-                margin-top:-280px;
+                margin-top:-260px;
                 >svg{
                     grid-area: nav;
                     height: 20%;
                     width: 20%;
+                    @include md{
+                        height: 15%;
+                        width: 15%;
+                    }
+                    @include lg{
+                        
+                    }
                 }
             }
         }

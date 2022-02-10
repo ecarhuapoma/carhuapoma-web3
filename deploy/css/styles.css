@@ -456,6 +456,11 @@ textarea {
     width: 32.5vw;
   }
 }
+@media (min-width: 1024px) {
+  #nav-container ul li > button:hover {
+    width: 23.27vw;
+  }
+}
 
 /* =============
     Navigation
@@ -573,12 +578,18 @@ textarea {
 }
 @media (min-width: 768px) and (min-width: 768px) {
   #header #navigation #burger_container {
-    margin-top: -280px;
+    margin-top: -260px;
   }
   #header #navigation #burger_container > svg {
     grid-area: nav;
     height: 20%;
     width: 20%;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) and (min-width: 768px) {
+  #header #navigation #burger_container > svg {
+    height: 15%;
+    width: 15%;
   }
 }
 @media (min-width: 768px) {

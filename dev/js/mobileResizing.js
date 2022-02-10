@@ -28,6 +28,9 @@ export function displayWindowSize(){
 }
 
 
+
+
+
 let navButtonsAnimate = document.querySelectorAll(".stagger-btns");
 console.log(navButtonsAnimate.length);
 
@@ -38,22 +41,24 @@ export function menuListner(){
         navButtonsAnimate.forEach((link,i) =>{
             link.addEventListener("mouseenter",()=>{
                 console.log("cursor-inside")
-                gsap.to(navButtonsAnimate[i],{duration:.3,scale:1.15,ease:"power3"})
+                gsap.to(navButtonsAnimate[i],{duration:.3,ease:"power3",x:"-=20",yoyo:true,repeat:-1});
             })
 
             link.addEventListener("mouseleave",()=>{
                 console.log("cursor-left");
-                gsap.to(navButtonsAnimate[i],{duration:.3,scale:1,ease:"power3"});
+                gsap.to(navButtonsAnimate[i],{duration:.3,ease:"power3"});
+                gsap.set(navButtonsAnimate[i],{x:0,repeat:1,yoyo:false});
             })
         });
     }else{
         navButtonsAnimate.forEach((link,i) => {
             link.addEventListener("mouseenter", ()=>{
-                gsap.to(navButtonsAnimate[i],{duration:.3,scale:1.15,ease:"power3"})
+                gsap.to(navButtonsAnimate[i],{duration:.3,ease:"power3",x:"-=20",yoyo:true,repeat:-1});
             })
 
             link.addEventListener("mouseleave", ()=>{
-                gsap.to(navButtonsAnimate[i],{duration:.3,scale:1,ease:"power3"})
+                gsap.to(navButtonsAnimate[i],{duration:.3,ease:"power3",x:"-=5",yoyo:true,repeat:1});
+                
             })
         });
     }

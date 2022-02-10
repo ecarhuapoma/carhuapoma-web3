@@ -37,6 +37,9 @@
                     @include md{
                         width: 32.5vw;
                     }
+                    @include lg{
+                        width: 23.27vw;
+                    }
                 }
 
             }
