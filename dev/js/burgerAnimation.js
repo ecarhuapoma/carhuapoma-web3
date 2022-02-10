@@ -28,13 +28,13 @@ gsap.set(".lower",{transformOrigin:"center"});
 gsap.set(".middle",{transformOrigin:"center"});
 
 const topTL = new gsap.timeline();
-topTL.to(".upper",{rotation:45,y:"+=3"});
+topTL.to(".upper",{rotation:45,ease:"back.inOut(1.7)",y:"+=3"});
 
 const middleTL = new gsap.timeline();
 middleTL.to(".middle",{alpha:0,duration:.25,scale:.1});
 
 const bottomTL = new gsap.timeline();
-bottomTL.to(".lower",{rotation:-45,duration:.25,y:"-=3"});
+bottomTL.to(".lower",{ease:"back.inOut(1.7)",rotation:-45,duration:.25,y:"-=3"});
 bottomTL.to(".upper, .lower",{duration:1});
 bottomTL.to(".upper, .lower",{duration:.5,stroke:"#FFF"},"-=.5");
 // bottomTL.to(".upper",{duration:.5,rotation:270},"-=.5");
@@ -71,7 +71,7 @@ bounceTL.to(".hamburger",{rotation:360,duration:10,repeat:-1, ease: "none"});
 
 
 export function reOrient(){
-    gsap.set(".hamburger",{rotate:0});
+    gsap.to(".hamburger",{rotate:0,ease:"back.inOut"});
 }
 
 

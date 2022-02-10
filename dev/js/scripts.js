@@ -24,7 +24,7 @@ import { displayWindowSize, menuListner } from "./mobileResizing";
 
 window.addEventListener('load', menuListner);
 window.addEventListener('resize', menuListner);
-//ssd
+
 
 
 var burgerButton = document.querySelector("#burger_container");

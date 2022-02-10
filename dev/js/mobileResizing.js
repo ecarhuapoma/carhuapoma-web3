@@ -15,8 +15,8 @@ export function displayWindowSize(){
 
     
    // check the view port view and see if the menu needs to be moved
-   if(document.documentElement.clientHeight <= 1024){
-    console.log("hide");
+   if(window.innerWidth <= 1048){
+    console.log("mobileee");
     gsap.set("#nav-container",{x:menuWidth});
     gsap.set(".stagger-btns",{alpha:0});
     }else{
@@ -27,39 +27,49 @@ export function displayWindowSize(){
 
 }
 
-
-
-
-
 let navButtonsAnimate = document.querySelectorAll(".stagger-btns");
 console.log(navButtonsAnimate.length);
 
 export function menuListner(){
-    console.log("hovered!!");
     if(window.innerWidth <= 1048){
+        console.log(window.innerWidth);
 
         navButtonsAnimate.forEach((link,i) =>{
+            const inHouseTL1 = new gsap.timeline({paused:true});
+                inHouseTL1.to(navButtonsAnimate[i],{duration:.5,y:"-=15",ease:"back.inOut(1)",yoyo:true,repeat:-1});
+                
             link.addEventListener("mouseenter",()=>{
-                console.log("cursor-inside")
-                gsap.to(navButtonsAnimate[i],{duration:.3,ease:"power3",x:"-=20",yoyo:true,repeat:-1});
-            })
+                inHouseTL1.play();
+            });
 
             link.addEventListener("mouseleave",()=>{
-                console.log("cursor-left");
-                gsap.to(navButtonsAnimate[i],{duration:.3,ease:"power3"});
-                gsap.set(navButtonsAnimate[i],{x:0,repeat:1,yoyo:false});
-            })
+                inHouseTL1.pause();
+                gsap.set(navButtonsAnimate[i],{y:+20});
+                // console.log("cursor-left");
+                // gsap.to(navButtonsAnimate[i],{duration:.3});
+                // gsap.set(navButtonsAnimate[i],{x:0,repeat:1,yoyo:false});
+            });
         });
     }else{
+        console.log(window.innerWidth);
         navButtonsAnimate.forEach((link,i) => {
+            const inHouseTL = new gsap.timeline({paused:true});
+                inHouseTL.to(navButtonsAnimate[i],{duration:1,x:"-=20",yoyo:true,repeat:-1});
+                
             link.addEventListener("mouseenter", ()=>{
-                gsap.to(navButtonsAnimate[i],{duration:.3,ease:"power3",x:"-=20",yoyo:true,repeat:-1});
-            })
+                inHouseTL.play();
+            });
 
             link.addEventListener("mouseleave", ()=>{
-                gsap.to(navButtonsAnimate[i],{duration:.3,ease:"power3",x:"-=5",yoyo:true,repeat:1});
+                // gsap.to(navButtonsAnimate[i],{duration:.3,x:0,yoyo:true,repeat:1});
+                // gsap.to(navButtonsAnimate[i],{duration:.3});
+                // gsap.set(navButtonsAnimate[i],{x:0,repeat:1,yoyo:false});
+                // const inHouseTL = new gsap.timeline({paused:true});
+                // inHouseTL.to(navButtonsAnimate[i],{duration:.3,ease:"power1.toFrom",x:"-=20",yoyo:true,repeat:-1});
                 
-            })
+                inHouseTL.pause();
+                gsap.set(navButtonsAnimate[i],{x:0});
+            });
         });
     }
 }

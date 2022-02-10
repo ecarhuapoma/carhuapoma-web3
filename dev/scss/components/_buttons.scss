@@ -23,6 +23,10 @@ button{
     &:hover{
         background-color: $italy-red;
         // width: 100vw;
+        @include md{
+            display: flex;
+            justify-content: flex-end;
+        }
     }
     
 }
