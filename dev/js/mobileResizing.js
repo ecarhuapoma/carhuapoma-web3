@@ -21,7 +21,7 @@ export function displayWindowSize(){
     gsap.set(".stagger-btns",{alpha:0});
     }else{
         console.log("un-hide");
-        gsap.set("#nav-container",{x:0});
+        gsap.set("#nav-container",{x:menuWidth,alpha:0});
         gsap.set(".stagger-btns",{alpha:1});
     }
 
@@ -31,9 +31,10 @@ let navButtonsAnimate = document.querySelectorAll(".stagger-btns");
 console.log(navButtonsAnimate.length);
 
 export function menuListner(){
+    
     if(window.innerWidth <= 1048){
         console.log(window.innerWidth);
-
+        console.log("mobile animation");
         navButtonsAnimate.forEach((link,i) =>{
             const inHouseTL1 = new gsap.timeline({paused:true});
                 inHouseTL1.to(navButtonsAnimate[i],{duration:.5,y:"-=15",ease:"back.inOut(1)",yoyo:true,repeat:-1});
@@ -44,7 +45,7 @@ export function menuListner(){
 
             link.addEventListener("mouseleave",()=>{
                 inHouseTL1.pause();
-                gsap.set(navButtonsAnimate[i],{y:+20});
+                gsap.set(navButtonsAnimate[i],{y:20});
                 // console.log("cursor-left");
                 // gsap.to(navButtonsAnimate[i],{duration:.3});
                 // gsap.set(navButtonsAnimate[i],{x:0,repeat:1,yoyo:false});
@@ -52,12 +53,14 @@ export function menuListner(){
         });
     }else{
         console.log(window.innerWidth);
+        console.log("sidebar animation");
         navButtonsAnimate.forEach((link,i) => {
             const inHouseTL = new gsap.timeline({paused:true});
                 inHouseTL.to(navButtonsAnimate[i],{duration:1,x:"-=20",yoyo:true,repeat:-1});
                 
             link.addEventListener("mouseenter", ()=>{
                 inHouseTL.play();
+                console.log("works")
             });
 
             link.addEventListener("mouseleave", ()=>{
