@@ -17,7 +17,7 @@
 // import { gsap } from "gsap";
 
 import {scrollAnimationPointFive, scrollAnimationAppear, scrollAnimation2, scrollAnimation3} from "./scrollAnimation"
-import { burgerTL } from "./burgerAnimation";
+import { burgerTL, bounceTL, reOrient } from "./burgerAnimation";
 import { menuAnimation, screenLocker } from "./mobileMenu";
 import { scrollPage } from "./pageScroll";
 import { displayWindowSize, menuListner } from "./mobileResizing";
@@ -37,39 +37,24 @@ function openCloseMenu(){
     if(canISeeMenu === false){
         burgerTL.play();
         menuAnimation.play();
+        bounceTL.play();
         canISeeMenu = true;
         screenLocker();
     }
     else{
         burgerTL.reverse();
         menuAnimation.reverse();
+        bounceTL.pause();
+        reOrient();
         canISeeMenu = false;
         screenLocker();
     }
 }
 
-
-
-// (".stagger-btns",{scale:"+=1",duration:2});
-
-// function buttonFunct(){
-//     // gsap.to(".stagger-btns",{paused:true,y:"+=40",duration:2});
-//     buttonMove.play();
-//     console.log("mouse entered");   
-// }
-
-
-
-// function antiButton(){
-//     buttonMove.reverse();
-// }
-
 let navButtons = document.querySelectorAll(".nav-btns");
 
 for (const button of navButtons){
     button.addEventListener("click", checkScrolling);
-    // button.addEventListener("mouseenter", buttonFunct);
-    // button.addEventListener("mouseleave", antiButton);
     button.addEventListener("click", openCloseMenu);
 }
 
@@ -91,11 +76,6 @@ document.querySelector('.hamburger').addEventListener('click', function(){
   })
   
 
-// burgerButton.addEventListener("click", function(){
-//     // console.log("button cliiiiick");
-
-//     burgerTL.play();
-// });
 
 
 window.addEventListener('load', function(){

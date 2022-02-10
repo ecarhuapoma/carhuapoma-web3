@@ -443,24 +443,6 @@ textarea {
 /* =============
     Navigation
 ============= */
-#nav-container ul {
-  height: 100%;
-  display: flex;
-  line-height: 30px;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-@media (min-width: 768px) {
-  #nav-container ul {
-    justify-content: center;
-    align-items: center;
-    align-content: flex-end;
-    line-height: 10px;
-    height: 70%;
-    margin-top: 125px;
-  }
-}
 #nav-container ul li > button {
   text-decoration: none;
   background-color: transparent;
@@ -468,6 +450,11 @@ textarea {
 #nav-container ul li > button:hover {
   background-color: #C64040;
   width: 100vw;
+}
+@media (min-width: 768px) {
+  #nav-container ul li > button:hover {
+    width: 32.5vw;
+  }
 }
 
 /* =============
@@ -483,15 +470,16 @@ textarea {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". burgie ." ". headline .";
+  width: 100vw;
 }
 #header #navigation #burger_container {
   grid-area: burgie;
   display: flex;
   justify-content: flex-end;
+  z-index: 1001;
 }
 #header #navigation #burger_container > svg {
   width: 0;
-  padding-top: 7px;
   height: 7%;
   position: absolute;
   z-index: 200;
@@ -504,30 +492,54 @@ textarea {
 }
 #header #navigation #nav-container {
   color: #fff;
-  background-color: #3762C5;
+  height: 100vh;
+  width: 100vw;
   grid-area: burgie;
-  text-align: center;
-  width: 100%;
-  height: 100%;
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+}
+@media (min-width: 768px) {
+  #header #navigation #nav-container {
+    color: #fff;
+    grid-area: burgie;
+  }
+}
+#header #navigation #nav-container > ul {
+  background-color: #3762C5;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
   justify-content: center;
-  position: absolute;
-  z-index: 1;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  #header #navigation #nav-container > ul {
+    width: 35vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 2vw;
+    float: right;
+    background-color: #3762C5;
+  }
+}
+@media (min-width: 1200px) {
+  #header #navigation #nav-container > ul {
+    width: 25vw;
+  }
 }
 @media (min-width: 768px) {
   #header #navigation #nav-container {
     grid-area: burgie;
     display: block !important;
-    background-color: #3762C5;
     color: #fff;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 1.25rem;
-    margin-top: -20px;
-    padding-bottom: 20px;
-  }
-  #header #navigation #nav-container > ul {
-    display: flex;
-    justify-content: space-evenly;
   }
 }
 #header #navigation #title_banner {

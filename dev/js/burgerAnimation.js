@@ -28,26 +28,56 @@ gsap.set(".lower",{transformOrigin:"center"});
 gsap.set(".middle",{transformOrigin:"center"});
 
 const topTL = new gsap.timeline();
-topTL.to(".upper",{stroke:"#FFF",rotation:45,y:"+=3"});
+topTL.to(".upper",{rotation:45,y:"+=3"});
 
 const middleTL = new gsap.timeline();
 middleTL.to(".middle",{alpha:0,duration:.25,scale:.1});
 
 const bottomTL = new gsap.timeline();
-bottomTL.to(".lower",{stroke:"#FFF",rotation:-45,duration:.25,y:"-=3"});
+bottomTL.to(".lower",{rotation:-45,duration:.25,y:"-=3"});
+bottomTL.to(".upper, .lower",{duration:1});
+bottomTL.to(".upper, .lower",{duration:.5,stroke:"#FFF"},"-=.5");
+// bottomTL.to(".upper",{duration:.5,rotation:270},"-=.5");
 
+
+// const toneShift = new gsap.timeline();
+// toneShift.to(".upper, .lower",{duration:1,stroke:"#FFF"},"-=2");
+// toneShift.to(".lower",{duration:1,stroke:"#FFF"},"same");
 
 export const burgerTL = new gsap.timeline({paused:true});
 
 burgerTL.add(topTL,"burger")
 .add(bottomTL,"burger")
 .add(middleTL,"burger");
+// .add(toneShift,"burger");
 
+export const bounceTL = new gsap.timeline({paused:true});
 
+// bounceTL.to(".upper",{rotation:45,duration:.5});
+// bounceTL.to(".lower",{rotation:-45,duration:.5},"-=.5");
+bounceTL.to(".hamburger",{rotation:360,duration:10,repeat:-1, ease: "none"});
 // gsap.set(".burger-lines",{transformOrigin:"center"});
 // gsap.set(".burger-lines:nth-child(2)",{drawSVG:"0% 22.5%"});
 // gsap.set(".burger-lines:nth-child(3)",{drawSVG:"77.5% 100%"});
 // // gsap.set("#outline",{drawSVG: "0%"});
+
+
+
+// export const reorientTL = new gsap.timeline({paused:true});
+//     reorientTL.to(".lower",{rotation:-45,duration:.25,y:"-=3"});
+//     reorientTL.to(".upper",{rotation:45,y:"+=3"});
+//     reorientTL.to(".hamburger",{x:0,y:0});
+    
+
+
+export function reOrient(){
+    gsap.set(".hamburger",{rotate:0});
+}
+
+
+
+
+
 
 // const topTL = new gsap.timeline();
 // topTL.to(".burger-lines:nth-child(1)",{duration:0.25})

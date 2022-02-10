@@ -4,20 +4,25 @@
 #nav-container{
     
     ul {
-        height: 100%;
-        display: flex;
-        // position: absolute;
-		line-height: 30px;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
+        // height: 100%;
+        // display:flex;
+        // align-items: center;
+        // flex-direction:column;
+        // width: 25vw;
+        // display: flex;
+        // // position: absolute;
+		// line-height: 30px;
+		// justify-content: center;
+		// align-items: center;
+		// flex-direction: column;
         @include md {
-			justify-content: center;
-            align-items: center;
-            align-content: flex-end;
-            line-height: 10px;
-            height: 70%;
-            margin-top: 125px;
+			// justify-content: right;
+            // width: 50vw;
+            // align-items: center;
+            // align-content: flex-end;
+            // line-height: 10px;
+            // height: 70%;
+            // margin-top: 125px;
 			// flex-direction: row;
 		}
         li {
@@ -29,6 +34,9 @@
                 &:hover{
                     background-color: $italy-red;
                     width: 100vw;
+                    @include md{
+                        width: 32.5vw;
+                    }
                 }
 
             }
